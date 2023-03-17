@@ -59,7 +59,13 @@
   2.35 Cinnamon to środowisko graficzne stworzone przez deweloperów dystrybucji Linux Mint.
   2.36 MATE jest pośrednią opcją między Xfce a GNOME. LXQt to kontynuacja LXDE, ale z bardziej spójnym interfejsem graficznym. 
   2.37 GNOME Flashback to klasyczny interfejs użytkownika oparty na GNOME 2. 
-  
+  2.38 Standardowe narzędzia systemowe" to niezbędny zestaw programów potrzebnych do prawidłowego działania systemu operacyjnego. Zawierają one m.in. biblioteki systemowe, narzędzia do zarządzania pamięcią, konsolowy interfejs użytkownika i programy systemowe, takie jak edytor tekstu. 
+  2.39 Podczas instalacji systemu operacyjnego, możemy wybrać opcję zainstalowania bootloadera, ale jeśli nie planujemy instalować dodatkowych systemów lub nie zamierzamy niczego zmieniać, możemy wybrać opcję "TAK" i zainstalować system na jednej partycji. 
+  2.40 Instalacja została przeprowadzona bez problemów i zakończyła się sukcesem.
+
+
+
+
 
 
 
