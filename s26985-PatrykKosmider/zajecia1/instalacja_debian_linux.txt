@@ -1,0 +1,71 @@
+Przygotwanie środowiska wirtualnego, w VirtualBox.
+	1. Utworzenie nowej maszyny (Debian x64)
+	2. Rozmiar pamięci RAM przydzielam na 4GB.
+	3. Tworzę nowy dysk wirtualny VDI - format przeznaczony na VB, pozostałe VHD - przeznaczony jest dla Hyper-V, a VMDK dla VMWare.
+	4. Dysk wybieram przedzialany dynamicznie - nie potrzebuję dużej wydajności i szybkości, która jest lepsza w przypadku dysku stałego, gdyż maszynę stawiam tylko w celach edukacyjnych. Dysk dynamiczny również zwiększa na bieżąco,
+	gdy na naszej maszynie przybywa danych, a nie z góry zajmuje określony rozmiar.
+	5. Rozmiar dysku przydzielam na 4GB, by mieć zapas do polecanych 2GB. Duży rozmiar nie jest mi potrzebny, gdyż nie będe nic zaawansowanego tworzył na tej VM'ce.
+	6. W opcjach "System" - zmieniam urządzenie wskazujące na mysz PS/2, bo korzystam z myszki. Chipset/Boot Order/Inne zostawiam na domyślne. Tak samo nie zmieniam ilość CPU przypisanej VM, gdyż 1 powinno w całości wystarczy.
+	7. Opcje "Ekran" - nie zmieniam, nie potrzeba więcej VRAM'u, niż domyślne 20MB przydzielone, ilość monitorów 1 oraz kontroler grafiki również zostaje domyślny - VMSVGA
+	8. Opcje "Dźwięk" - wyłączam, nie robię na maszynie nic związanego z audio więc obecnie nie jest mi potrzebny.
+	9. Pozostałe opcje VB zostawiam domyślne, sieć NAT by mieć dostęp do internetu (Pozostałe opcje : -bridged, czyli tryb w którym VM ma bezpośredni dostęp do sieci, -sieć wewnętrzna - umożliwia komunikacje tylko pomiędzy systemi operującymi w tej samej sieci wewnętrznej, -karta sieci izolowanej - komunikacja jest możliwa tylko i wyłącznie między hostem a VM, -sieć NAT - działa podobnie jak NAT, z różnicą, że operuje na grupach maszyn wirtualnych, umożliwia zmianę puli DHCP, on/off IPv6 i port forwarding. Możemy grupować maszyny w sieci, uniemożliwiając im komunikację między sobą gdy należą do innych, ale wszystkie będą miały dostęp do internetu, -niepodłączona - symulacja braku kabla w sieciówce.
+	10. Nie włączam portów szeregowych, gdyż nie przydadzą mi się i nie będe łączył się do maszyny po serial porcie.
+	11. Kontroler USB zostawiam włączony.
+	12. Dodaje sobie folder udostępniony, by w razie potrzeby móc szybko przerzucać sobie pliki między hostem a VM.
+
+Instalacja systemu operacyjnego Debian.
+
+	W trakcie instalacji systemu pojawił mi się Kernel panic - korzystając z internetu, jako fix ustawiłem 2 CPU w VB!
+
+	1. Wybieram opcję Install, bez interfejsu graficznego. W opcjach advanced możemy znaleźć instalację w trybie graficznym ekspert( dla zaawansowanych użytkoników), rescue mode, czyli zestawu narzędzi do próby odratowania naszego systemu, w przypadku awarii, automated install - instalacje automatyczną. Znajdziemy również odpowiedniki wyżej wymienionych narzędzi, tylko że nie w trybie graficznym.
+	2. Opcję językowe - Angielski.
+	3. W lokalizacji podaje Polskę. Other -> Europe -> Poland
+	4. Układ klawiatury wybieram en_US.UTF-8, czyli Amerykański gdyż z takiej korzystam jak zapewne każdy.
+	5. Zestaw znaków ustawiam na American English / z polskich korzystać nie będe.
+	6. Hostname, czyli jak widoczny będzie maszyna w sieci ustawiam na test-debian, jakąs nazwę w końcu trzeba dać.
+	7. Domeny nie ustawiam, bo nie korzystam i nie mam takowej nigdzie skonfigurowanej.
+	8. Ustawiam hasło dla roota, oraz tworze swoje wlasne konto.
+	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał część plików.Partycji swap nie tworzę, gdyż mam wystarczająca zapas 	pamięci RAM, a maszyna nie będzie służyć do zaawansowanych i obciążających celów. W Guided partitioning możemy wybrać, by automatycznie	
+	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), oraz to
+	samo co wcześniej tylko z zaszyfrowanym LVM. Obie partycję są tworzone jako primary, gdyż nie mam więcej niz 4.
+	10. System plików wybieram Ext4 - najnowsza wersja ext, ma większe limity pojemności niż poprzednie, jest wstecznie kompatybilny ze starszymi wersjami, ma lepszą wydajność oraz wieksza ilość obsługiwanych podfolderów. Posiada 	również księgowanie, czyli dane zapisywane są w "dzienniku", zanim zostaną zapisane na dysk, więc zmniejsza się ryzyky utraty danych. Przykładowo jeśli nasz komputer wyłączy się w trakcie procesu zapisywania, zostanie on 	dokończony po jego ponownym uruchomieniu, lub stracimy tylko zmiany wprowadzone, ale plik oryginalny wciąż będzie dostępny.  
+		Pozostałe opcje:
+		-  Ext3 - poprzednik ext4, mniejsza wydajność i limity, również posiada mechanizm księgowania
+		-  Ext2 - jeszcze starsza wersja, brak mechanizmu księgowania
+		-  BRTFS - najbardziej zaawansowany system plików linux'a, oferuje możliwość tworzenia RAID'ów, ponieważ posiada wbudowane zarządzanie woluminami, automatyczną naprawą uszkodzonych danych i kompresję oraz w system, który 			wykonuje kopie naszego pliku, podczas jego zapisu.
+		- JFS - podobny do ext4, posiada mechanizm księgowania, obsługa bardzo dużych rozmiarów partycji, nawet do 32PB, oferuje też większa wydajność niż Ext4
+		- XFS - przygotowany do zastosowań serwerowych, również obsługa bardzo dużych rozmiarów, mechanizm księgowania, obsługuje wiele systemów, np. rozszerzone atrybuty plików(możliwość tworzenie bardziej skomplikowanych sceniaruszy uprawnień i dostępów do plików/katalogów), czy też listy dostępu.
+		- FAT16 - stary system plików, używany m.in w Windows 95, bardzo małe rozmiary, plik max. 2GB, lub max. rozmiar partycji zaledwie 4GB
+		- FAT32 - nowsza werjsa FAT16, z 16 bitów przejście na 32, co powiększyło jego limity, np. plik z 2GB do 4GB, jednak dalej są to obecnie malutkie rozmiary.
+		- SWAP - specjalny rodzaj partycji, który służy do przechowywania danych, gdy te przekraczają ilość dostępnej pamięci RAM.
+		Oprócz tego możemy stworzyc fizyczny wolumin(wydzielona część dysku na przechowywanie danych) na szyfrowanie, RAID'a lub LVM.
+	W trakcie tworzenia partycji możemy wybrać jej punkt montowania:
+  	- / - partycja systemowa
+      - /home - partycja na katologi domowe
+      - /tmp - na pliki tymczasowe
+	- /usr - na dane pernamentne
+	- /var - na dane zmieniające się
+	- /srv - na dane dla usług systemów
+	- /opt - na dodatkowe pakiety/aplikacje
+	Lub nadać nazwę dla partycji, sposób używania, by dostować parametry naszego file-systemu najlepiej, ustawić bootable flag - czyli wybrać z tej partycji ma się bootować system, oraz ustawić opcję montowania. Te określają
+	czy m.in mamy zamontować system plików w trybie tylko read-only, umożliwić obsługę rozszerzonych atrybutów lub wyłączyć możliwość uruchamiania plików wykonywalnych.
+	11. Po stworzenie 2 partycji podstawowych, w domyślnej konfiguracji, przechodzę dalej, nie posiadam żadnych płyt instalacyjnych więc pomijam tą opcję. Jako mirror server wybieram ten najbliżej mnie, czyli ftp.task.gda.pl
+	12. Pomijam opcję dodania proxy, gdyż nie muszę żadnego ustawiać, by mieć wyjście na świat.
+	13. Opcję zbierania statystyk, na temat używanych pakietów, zostawiam domyślnie czyli na "Nie".
+	14. Przy wyborze softwaru zostawiam opcję domyślnie, nie potrzebuję GUI, więc instaluje tylko serwer SSH i podstawowe potrzebne narzędzia.
+		Opcje GUI do wyboru:	
+		- GNOME - intuicyjny i wygodny interferjs graficzny, jednak najbardziej zasobożerny
+		- KDE - mniej obciążająca wersja niż GNOME
+		- XFCE - proste w obsłudze szybkie środowisko, które posiada podstawowe narzędzia, mało obciążające
+		- LXDE/LXQT - najbardziej lekkie GUI stworzone z myslą o starszych komputerach
+		- Cinnamon - powstał od GNOME, jednak wraz z nowszymi wersjami stał się samodzielnym GUI
+		- MATE - mniejsze wymagania sprzętowe od GNOME
+	15. Instaluję boot loadera GRUB - wymagany program, by móc uruchomić system, lub wiele systemów, gdy mamy zainstalowany więcej niż jeden na jednym dysku. Jako miejsce instalacji wybieram jedyny dysk /dev/sda
+	16. Instalacja została zakończona pomyślnie.
+	
+	
+
+
+
+
+	

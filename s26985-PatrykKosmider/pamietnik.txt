@@ -1,0 +1,4 @@
+04.03.2023
+
+Na dzisiejszych zajęciach oprócz przedstawienia zasad zaliczenia, miała miejsce szczegołówa instrukcja przygotowania środowiska wirutalnego (w oparciu o VirutalBox) oraz instalacja systemu Debian w nim.
+Nie nauczyłem się czegoś nowego, bardziej mogę to potraktować jako odświeżenie wiadomości, gdyż z narzędzia VirtualBox, korzystałem większość czasu spędzonego w technikum informatycznego, również instalowałem tam dystrybucje linux'a OpenSuse/Ubuntu. Podobnie w pracy, gdzie głównym OS'em na którym konfiguruję platformy, jest Ubuntu, a jego reinstall to czasem podstawowe narzędzie naprawy. Wszystko w tym temacie jest dla mnie jasne.
