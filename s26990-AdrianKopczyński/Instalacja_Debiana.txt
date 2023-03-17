@@ -1,0 +1,35 @@
+Przygotwanie VirtualBox:
+	* Utworzenie nowej maszyny, Name:Debian, Machine Folder:*My_local_folder*,Type:Linux, Version:Debian x64
+	* Rozmiar pamięci RAM przydzielam na 512MB(tyle jest rekomendowane).
+	* Tworzę nowy dysk wirtualny VDI - format przeznaczony na VB, pozostałe VHD - przeznaczony jest dla Hyper-V, a VMDK dla VMWare.
+	* Dysk wybieram przedzialany dynamicznie z racji braku wymagań wydajnośćowych systemu (instalacja następuje wyłącznie w celach edukacjynych). Taka opcja nie zajmuje też z góry miejsca na dysku, tylko przydziela je odpowiednio ze zwiększaniem się ilości danych.
+	* Rozmiar dysku przydzielam na 3GB, żeby mieć trochę zapasu do wyamganych 2GB przez system.
+	* Opcje "System" - urządzenie wskazujące - na mysz PS/2 z powodu korzystania z myszy. Ilość CPU - 2 (przy ustawionym na 1 instalacja wyrzucała "Kernel Panic"). Reszta - domyślne. 
+	* Opcje "Ekran" - domyślne.
+	* Opcje "Dźwięk" - wyłączam z racji na brak potrzeby używania audio.
+	* Sieć ustawiam jako NAT by mieć dostęp do internetu.
+	* Portów szeregowych nie włączam, nie będzie potrzeby ich używania.
+	* Kontroler USB włączony 
+	* Resztę opcji VB nie zmieniam.
+
+Instalacja Debiana:
+
+	* Wybieram opcję Install, bez interfejsu graficznego. W opcjach advanced jest jeszcze instalacja w trybie graficznym ekspert, rescue mode, automated install. Wszystkie te tryby są także dostepne w tryubie graficznym.
+	* Opcję językowe ustawiam na angielski.
+	* Lokalizacja - Polska (Other - Europe - Poland)
+	* Układ klawiatury en_US.UTF-8 taki sam jak w mojej klawiaturze.
+	* Nie ustawiam polskich znaków, ponieważ nie będę z nich korzystał, wybieram Amercian/English.
+	* Hostname ustawiam jako test (i tak nie będę szukał hosta w sieci).
+	* Ustawienia domeny pomijam, ponieważ jej nie posiadam i nie potrzebuję.
+	* Ustawiam hasło dla użytkownika root, oraz tworze swoje konto użytkownika.
+	* Partycję dysku ustawiam ręcznie, na system przeznaczam 2GB(tyle jest rekomendowane), z dodatkowego 1GB robię dodatkową partycjęgdzie będę przechowywał pliki. 
+	* Partycji swap nie tworzę, ponieważ przyznany wcześniej maszynuie RAM wystarczy, a na maszynie nie będę robił nic co by obciążało maszynę.
+	* Obie partycje jako primary bo jest ich mniej niż 4.
+	* System plików Ext4 bo jest najnowszy
+	* Pomijam opcję wyboru płyty.
+	* Mirror server wybieram ten najbliżej mmojej lokalizacji, konkretnie ten na Politechnice Gdańskiej: ftp.task.gda.pl
+	* Pomijam dodawanie proxy, bo go nie potrzebuję.
+	* Opcję zbierania statystyk zostawiam na "Nie", bo po co mają zbierać moje dane.
+	* Przy wyborze software'u zostawiam domyślne, instaluje tylko serwer SSH i podstawowe narzędzia.
+	* Instaluję boot loadera GRUB ,ponieważ bez tego nie uruchomimy systemu. Instaluję go w /dev/sda
+	* Instalacja zakończona pomyślnie.
