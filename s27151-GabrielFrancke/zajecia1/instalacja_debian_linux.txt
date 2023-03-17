@@ -7,6 +7,11 @@
   1.6 Mamy do wyboru dynamiczne przydzielanie pamięci, co oznacza, że nie musimy od razu alokować całej przestrzeni dyskowej, lecz tylko tyle, ile aktualnie potrzebujemy, lub stały rozmiar, który rezerwuje całą potrzebną przestrzeń na dysku od razu, dzięki czemu system działa szybciej. 
   1.7 W przypadku wyboru stałego rozmiaru, należy wybrać rekomendowaną wielkość dla systemu bez interfejsu graficznego, czyli 2GB, jednak w celu zapewnienia stabilności systemu, zaleca się wybór większego dysku twardego, np. 4GB. 
   1.8 Ostatnim krokiem jest wybór lokalizacji oraz rozmiaru dysku dla wirtualnej maszyny.
+  1.9 Gdy już mamy stworzną maszynę wirtualną w ustawieniach nie dokonuję zmian w opcjach "System", pozostawiam je takie, jakie są ustawione domyślnie. Również nie modyfikuję ilości procesorów przypisanych do maszyny, gdyż jeden powinien być wystarczający.
+  1.10 W sekcji "Ekran" pozostawiam wszystkie opcje bez zmian, ponieważ domyślnie przypisane 20MB VRAM i jeden monitor w zupełności mi wystarczają, a kontroler grafiki VMSVGA jest dla mnie wystarczający.
+  1.11 Natomiast w sekcji "Dźwięk" wyłączam tę opcję, ponieważ nie potrzebuję obecnie żadnych funkcjonalności dźwiękowych na maszynie.
+  1,12 W pozostałych ustawieniach VirtualBox pozostawiam domyślne wartości. Wykorzystuję sieć NAT, aby mieć dostęp do internetu z maszyny wirtualnej. Inne opcje to m.in. tryb sieciowy "bridged", który umożliwia bezpośredni dostęp do sieci, wewnętrzna sieć, która pozwala na komunikację tylko w obrębie tej samej sieci, oraz izolowana karta sieciowa, która umożliwia komunikację tylko między hostem a maszyną wirtualną.
+  1.13 Nie korzystam z portów szeregowych, ponieważ nie są mi potrzebne do łączenia się z maszyną, a kontroler USB pozostawiam włączony.
   
 2. Instalowanie systemu operacyjnego Debian:
   2.1 
