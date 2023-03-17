@@ -1,0 +1,6 @@
+04.03.2023
+Na dzisiejszych zajęciach było przedstawienie zasad zaliczenia i przedstawienie to czego będziemy się uczyć.
+Potem przeszliśmy do pobrania debiana, i postawienia maszyny na VirtualBox'ie. Po postawieniu maszyny i przejscia przez,
+jej ustawienia. Zabraliśmy się za bardzo dokładne omówienie instalacji.
+Zajęcia były dla mnie powtórzeniem jeśli chodzi o instalacje debiana (technikum i praca). Jednak VirtalBox był czymś nowym,
+ponieważ w domu korzystałem z VMware Workstation.
