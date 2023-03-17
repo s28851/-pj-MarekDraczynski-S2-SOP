@@ -14,7 +14,67 @@
   1.13 Nie korzystam z portów szeregowych, ponieważ nie są mi potrzebne do łączenia się z maszyną, a kontroler USB pozostawiam włączony.
   
 2. Instalowanie systemu operacyjnego Debian:
-  2.1 
+  2.1 Rozpoczynamy uruchamianie wirtualnej maszyny, która wyświetla nam menu z różnymi opcjami. 
+  2.2 Opcje te obejmują instalację Debiana w wersji graficznej, tekstowej oraz zaawansowane opcje, takie jak specjalne właściwości instalacji systemu, uruchomienie środowiska naprawczego i automatyczną instalację z pliku odpowiedzi. 
+  2.3 Istnieje również specjalne menu dla ludzi z problemami ze wzrokiem, które oferuje kontrastowy wygląd graficzny, a także opcja pomocy dla użytkowników. 
+  2.4 Dla osób niewidomych istnieje możliwość instalacji z włączonym syntezatorem mowy. 
+  2.5 Wybieramy język angielski, który jest znany na całym świecie i ułatwia rozwiązywanie problemów. 
+  2.6 Ze względu na szybkość działania wybieramy instalację wersji tekstowej.
+  2.7 Podczas konfiguracji lokalizacji wskazujemy, że znajdujemy się w Polsce, wybierając opcję "Other -> Europe -> Poland". 
+  2.8 Wybieramy układ klawiatury "en_US.UTF-8", czyli amerykański, ponieważ jest to standardowy układ klawiatury, którego większość ludzi używa. 
+  2.9 Ustawiamy zestaw znaków na "American English", ponieważ nie potrzebujemy polskich znaków. 
+  2.10 Ustawiamy nazwę hosta na "test-debian", aby maszyna była łatwiejsza do zidentyfikowania w sieci. 
+  2.11 Nie ustawiamy domeny, ponieważ nie korzystamy z niej i nie mamy jej skonfigurowanej. 
+  2.12 Ustawiamy hasło dla użytkownika root i tworzymy swoje własne konto.
+  2.13 Podczas instalacji systemu, wybieramy jak chcemy podzielić nasz dysk. Mamy kilka opcji do wyboru:
+        2.13.1 Guided - użyj całego dysku - instalator poprowadzi nas przez proces instalacji, co przyśpieszy proces partycjonowania. Możemy wybrać:
+               2.13.1.1 Wszystkie pliki w jednej partycji (zalecane dla nowych użytkowników) - wszystkie pliki będą umieszczone na jednej partycji, co jest przyjazne dla początkujących użytkowników.
+               2.13.1.2 Oddzielna partycja /home - katalogi domowe użytkowników będą oddzielone od systemu, co pozwala na ponowną instalację systemu operacyjnego, a pliki użytkowników pozostaną nietknięte.
+               2.13.1.3 Oddzielne partycje /home, /var i /tmp - wszystkie opcje są oddzielone, aby pliki nie nachodziły na siebie, oraz umożliwiają łatwiejszą konfigurację.
+        2.13.2 Guided - użyj całego dysku i skonfiguruj LVM - jest to rozwiązanie pozwalające na połączenie różnych typów dysków w jedną przestrzeń, np. dysk NVME wraz z dyskiem HDD. Nie zalecane dla początkujących użytkowników.
+        2.13.3 Guided - użyj całego dysku i skonfiguruj szyfrowanie LVM - tak jak powyżej, ale dodatkowo dochodzi szyfrowanie.
+        2.13.4 Ręczne ustawienie partycjonowania - w tym przypadku wszystko ustawiamy sami, co może być korzystne w celach edukacyjnych.
+  2.14 Jeśli wybierzemy ręczne ustawienie partycjonowania, mamy kilka opcji:
+      2.14.1 Guided partitioning - przewodnik opisany powyżej.
+  2.15 Konfiguruj woluminy iSCSI - jest to format pozwalający na podłączenie dysków sieciowych (nie jest to standard kodowania znaków w alfabecie Indyjskim).
+  2.16 Wybieramy dysk, na którym chcemy utworzyć partycje.
+  2.17 Zgadzamy się na utworzenie nowej partycji na dysku.
+  2.18 Tworzymy partycję, określając jej rozmiar i typ (podstawowa lub wymiany), oraz ustalamy, czy partycja ma się zaczynać na początku czy na końcu dostępnego miejsca.
+  2.19 Dla każdej partycji wybieramy system plików (domyślnie Ext4 journaling file system), a także określamy opcje montowania (domyślne).
+  2.20 Nie wybieramy żadnej etykiety.
+  2.21 Określamy procent zarezerwowanej przestrzeni dyskowej (domyślnie 5%) oraz tryb użycia (standardowy).
+  2.22 Ustawiamy flagę bootable na pierwszej partycji.
+  2.23 Zatwierdzamy przydzielenie partycji, dzięki czemu nie mamy nieużywanej przestrzeni dyskowej.
+  2.24 Zapisujemy ustawienia partycjonowania.
+  2.25 Zaczynamy proces instalacyjny, mamy opcję dodania kolejnych nośników, ale nie posiadam żadnych, więc wybieram opcję "Nie".
+  2.26 Następnie, w liście krajów wybieram Polskę.
+  2.27 Wybieram serwer do pobierania pakietów z Politechniki Gdańskiej "ftp.task.gda.pl."
+  2.28 Nie podaję żadnych informacji w opcji ustawienia serwera PROXY.
+  2.29 Domyślnie zostawiam opcję zbierania statystyk dotyczących używanych pakietów na "Nie".
+  2.30 Przy wyborze opcji środowiska graficznego podczas instalacji systemu operacyjnego Debian mamy do wyboru kilka opcji. 
+  2.31 Domyślnym środowiskiem graficznym jest GNOME, które charakteryzuje się minimalistycznym wyglądem i łatwością użytkowania. 
+  2.32 KDE to kolejna opcja, która wykorzystuje biblioteki Qt i oferuje interfejs graficzny zbliżony do systemów Windows. 
+  2.33 Xfce to lekkie i szybkie środowisko graficzne, które wykorzystuje mniej zasobów niż GNOME i KDE. 
+  2.34 LXDE to jeszcze lżejsze i szybsze środowisko graficzne, idealne dla starszych komputerów lub urządzeń z ograniczonymi zasobami. 
+  2.35 Cinnamon to środowisko graficzne stworzone przez deweloperów dystrybucji Linux Mint.
+  2.36 MATE jest pośrednią opcją między Xfce a GNOME. LXQt to kontynuacja LXDE, ale z bardziej spójnym interfejsem graficznym. 
+  2.37 GNOME Flashback to klasyczny interfejs użytkownika oparty na GNOME 2. 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
