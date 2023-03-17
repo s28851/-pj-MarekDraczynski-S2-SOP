@@ -1,1 +1,15 @@
+1.Konfigurowanie w Oracle VM VirtualBox:
+  1.1	Tworzymy nową maszynę wirtualną, dajemy jej opdowiednią nazwę, wybieramy typ maszyny oraz wybieramy odpowiednią wesje systemu operacyjnego
+  1.2 Przydzielamy adekwatną ilość pamięci RAM, większa niż wymagana dla stabilności systemu, jest to 512MB dla systemu bez interfejsu graficznego. Ja przydzieliłem 1024MB.
+  1.3 Przy tworzeniu wirtualnej maszyny musimy wybrać rodzaj pliku dla wirtualnego dysku. Mamy trzy opcje do wyboru: VDI, VHD i VMDK. 
+  1.4 Najlepszym wyborem jest VDI, ponieważ jest to natywny format dla Virtualboxa, co oznacza, że będzie on kompatybilny z większością systemów operacyjnych i najmniej skomplikowany. 
+  1.5 Kolejnym krokiem jest wybór rodzaju pamięci na fizycznym dysku twardym. 
+  1.6 Mamy do wyboru dynamiczne przydzielanie pamięci, co oznacza, że nie musimy od razu alokować całej przestrzeni dyskowej, lecz tylko tyle, ile aktualnie potrzebujemy, lub stały rozmiar, który rezerwuje całą potrzebną przestrzeń na dysku od razu, dzięki czemu system działa szybciej. 
+  1.7 W przypadku wyboru stałego rozmiaru, należy wybrać rekomendowaną wielkość dla systemu bez interfejsu graficznego, czyli 2GB, jednak w celu zapewnienia stabilności systemu, zaleca się wybór większego dysku twardego, np. 4GB. 
+  1.8 Ostatnim krokiem jest wybór lokalizacji oraz rozmiaru dysku dla wirtualnej maszyny.
+  
+2. Instalowanie systemu operacyjnego Debian:
+  2.1 
+
+
 
