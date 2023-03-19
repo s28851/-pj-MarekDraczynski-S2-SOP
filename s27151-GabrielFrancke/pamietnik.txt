@@ -1,0 +1,4 @@
+2023-03-04
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Jak zainstalować system operacyjny Debian jako maszynę wirtualna, jak odpowiednio dysponować zasaboami przeznaczonymi na własną maszyne wirtualna i jak wygląda przebieg całej instalacji tego systemu operacyjnego. 
+- Nie miałem z tym większych problemów ponieważ kożystałem już wcześniej z VB i ze środowiska linuxowego ubuntu.
