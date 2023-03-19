@@ -1,0 +1,5 @@
+2023-03-04
+Moj Kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-Jak skonfigurować jak i możliwości które daje progrtam zwany virtual box również poznałem czym jest debian i jak go zainstalować.
+-Wszystko jest dla mnie jasne poniewaz juz kiedys mialem doczynienia z Virtual Boxem.
+-Troche za szybkie tempo mowienia.
