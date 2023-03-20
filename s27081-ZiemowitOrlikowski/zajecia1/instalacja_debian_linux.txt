@@ -1,33 +1,118 @@
 Zadaniem jest skonfigrowanie maszyny wirtualnej oraz instalacja systemu operacyjego Linux Debian
 
 Po kliknieciu nowa maszyna nadajemy jej nazwe w sekcji Name, w sekcji Machine Folder wybieramy folder, w której ma siê znajdowaæ nasza maszyna. Nastepnie wybieramy typ systemu - w naszym przpadku jest to Linux oraz Wersje systemu - Debian 64-bit zgodnie z architektur¹ naszego procesora
-W kolejnym kroku przydzielamy pamiêæ RAM dla naszej maszyny, wed³ug dokumentacji minimalne wymagania to 64 MB pamiêci, ja dysponujê sprzêtem z 32 GB RAM i w celu przyspieszenia procesu instalacji ustawiam 2GB - po instalaji to ustwaienie zmniejszê.
+
+W kolejnym kroku przydzielamy pamiêæ RAM dla naszej maszyny, wed³ug dokumentacji minimalne wymagania to 64 MB pamiêci, ja dysponujê sprzêtem z 32 GB RAM i w celu przyspieszenia procesu instalacji ustawiam 2GB - po instalaji to ustwaienie zmniejsze.
+
 Dalej mam mo¿lwosc nie dodawania wirtualnego dysku twardego, stworzenia wirtulanego dysku albo dodania ju¿ istniej¹cego dysku. Ja wybieram stworzenie dysku aby mieæ gdzie zainstalowaæ system.
+
 W trakcie tworzenia mo¿na wybrac VDI - dysk przystosowany do srodowiska VirtualBox, VHD - dysk witualny wykorzystywany m.in. przez Hyper-V albo VMDK - który mo¿e przechowywaæ obraz maszyny i jej dane.
-Do moich potrzeb wystarczy VDI, dalej mo¿na wybraæ dynamicznie rozdzielany- dysk rozszerza siê z przyp³ywem danych, oraz sta³y rozmiar - z góry zak³adamy ile maszyna powinna mieæ pamiêci
-Wybieram sta³y rozmiar, wolê stale okreslony rozmiar dysku, zapewnia mi to wiêksz¹ "kontrolê" nad ilosci¹ danych i zu¿yciem dysku.
-Dalej mamy do okreslenia lokalizacje naszego dysku wirtualnego oraz jego wielkosc, wedlug dokumetacji wystarzczy 1 GB, ja dam 2GB na ewnetulane aktualizacje.
+
+Do moich potrzeb wystarczy VDI, dalej mo¿na wybraæ dynamicznie rozdzielany- dysk rozszerza siê z przyp³ywem danych, oraz sta³y rozmiar - z góry zak³adamy ile maszyna powinna mieæ pamiêci. Wybieram sta³y rozmiar, wolê stale okreslony rozmiar dysku, zapewnia mi to wiêksz¹ "kontrolê" nad ilosci¹ danych i zu¿yciem dysku. Dalej mamy do okreslenia lokalizacje naszego dysku wirtualnego oraz jego wielkosc, wedlug dokumetacji wystarzczy 1 GB, ja dam 2GB na ewnetulane aktualizacje.
+
 Po klikniêciu utwórz nasza maszyna zosta³a dodana do listy maszyn.
+
 Przejdzmy do ustawieñ maszyny
-W ustawieniach ogólnych mamy mo¿lwosc zmiany nazwy, typu wersji maszyny, konfiguracji folderów migawek - migawka pozwala na zapisanie stanu maszyny i cofni¹cia siê do niego w dowolnym momencie po restarcie, wspó³dzielony schowek z naszym komputerem, przeci¹ganie i upuszczanie plików od razu do maszyny wirtualnej, opis oraz szyfrowanie dysku, które nie bêdzie nam na tym etapie potrzebe.
+W ustawieniach ogólnych mamy mo¿lwosc zmiany nazwy, typu wersji maszyny, konfiguracji folderów migawek - migawka pozwala na zapisanie stanu maszyny i cofni¹cia siê do niego w dowolnym momencie po restarcie, wspó³dzielony schowek z naszym komputerem, przeci¹ganie i upuszczanie plików od razu do maszyny wirtualnej, opis oraz szyfrowanie dysku, które nie bêdzie nam na tym etapie potrzebne.
+
 W zak³adce system->p³yta g³ówna mo¿emy edytowaæ RAM przydzielony do maszyny, wybraæ kolejnosc bootowania - ja wy³¹czam floppy i daje napêd na pierwsze miejsce poniewa¿ musimy zainstalowaæ system z witrualnej p³yta. Dalej mamy chipset PIIX3 lub ICH9 - wybieram PIIX3 poniewa¿ system nie jest na tyle z³o¿ony aby wybieraæ mocniejszy, w urz¹dzeniu wskazuj¹cym daje Mysz PS/2 jest w 100% wystarczj¹ca do naszego u¿ytku. W zak³adce Procesor wybieram jeden procesor i 100% u¿ycia aby instalacja przebieg³a sprawnie, dalej mamy do wyboru w³¹czenie PAE/NX - nie bêdzie nam potrzebne nasz system nie jest 32-bitowy oraz Nested VT-x te¿ zostawiamy wy³¹czone nie bêdziemy robiæ witrualizacji na naszej maszynie wirtualnej.
+
 Zak³adka ekran zawiera przydzielenie pamiêci wideo - potrzebna przy doborze rozdzielczosci i u¿ytku uk³adu graficznego w naszej maszynie, zostawiam na 16 MB, które wystarcz¹. Liczba monitorów tak¿e jeden jest wystarczaj¹ca. Wspó³czynnik skali zostawiamy na 100% nie potrzebujemy skalowania obrazu aby by³ wiêkszy. Kontroler graficzny zostawiamy na VMSVGA jest domyslny dla Linuxowch srodowisk, VboxVGA jest dedykowany dla Vitualboxa dla Windowsów 7 w dó³ ooraz VBoxSVGA standardowy dla Windowsa.
+
 Mo¿emy wy³¹czyæ te¿ zdalny pulpit co pozwala zdalnie ³¹czyæ siê przeez maszynê, wystarczy ustawiæ port, metode uwierzytelniania limit ile czasu maksymalnie mo¿e siê logowaæ oraz czy wiele maszyn mo¿e siê ³¹czyæ.
-Nagrywanie mo¿na tak¿e w³¹czyæ wystarczy ustaliæ scie¿kê do pliku czy ma byæ nagrywany dzwiêk oraz jakosæ i ile klatek ma byæ nagrtwane
+
+Nagrywanie mo¿na tak¿e w³¹czyæ wystarczy ustaliæ scie¿kê do pliku czy ma byæ nagrywany dzwiêk oraz jakosæ i ile klatek ma byæ nagrywane.
+
 W pamiêci musimy dodaæ kontroler IDE z nasz¹ p³yt¹ instalcyjn¹ Debiana, klikamy  na p³ytkê wybieramy nasz plik .iso z debianem i klikamy dodaj. Mamy opcje Live CD/DVD któr¹ zostawiamy odznaczon¹, pozwala ona na "pozostawienie" p³yty w napêdzie nawet po wyjêciu i restarcie. Poni¿ej mamy Kontrole SATA gdzie znajduj¹ siê nasze zamontowane dyski czyli w naszym przypadku ten, który stworzylismy w trakcie stawiana maszyny wirtualnej.
-Dzwiêk pozwala na w³¹czenie dzwieku z maszyny wirtulanej, mamy do wyboru stertownik dzwieku gospodarza: windows DirectSound oraz zerowy sterownik dzwiêku, wybieramy Windowsowy - jest to uniwersalny sterownik pozwalaj¹cy na przechwycenie dzwiêku, dalej mamy kontrolery audio ró¿ni¹ siê miêdzy sob¹ wartosciami przy kodowaniu i dekodowaniu dla stereo - przyk³adowo AC97 pozwala nam na szesæ kana³ów a Intel HD Audio na osiem, dlaej mamy rozszerzeia Audio output - zostawiamy w³¹czone, oraz Audio input - zostawiamy wy³¹czone nie bêdziemy u¿ywaæ mirkofonów lub kamer z mikrofonem.
+
+Dzwiêk pozwala na w³¹czenie dzwieku z maszyny wirtulanej, mamy do wyboru stertownik dzwieku gospodarza: windows DirectSound oraz zerowy sterownik dzwiêku, wybieramy Windowsowy - jest to uniwersalny sterownik pozwalaj¹cy na przechwycenie dzwiêku, dalej mamy kontrolery audio ró¿ni¹ siê miêdzy sob¹ wartosciami przy kodowaniu i dekodowaniu dla stereo - przyk³adowo AC97 pozwala nam na szesæ kana³ów a Intel HD Audio na osiem, dalej mamy rozszerzeia Audio output - zostawiamy w³¹czone, oraz Audio input - zostawiamy wy³¹czone nie bêdziemy u¿ywaæ mirkofonów lub kamer z mikrofonem.
+
 W sieci mo¿emy w³¹czyæ do czterech kart sieciowych - my bierzemy tylko jedn¹ na trybie NAT, aby mieæ dostêp do sieci. Prócz tego mamy do wyboru mostkowan¹ sieciow¹- witualka jest na równi z naszym komputerem, sieæ wewnêtrzn¹ - maszyna nie ma komunikacji poza swoj¹ sieæ, izolowana dodaje do naszego komputera dodatkow¹ witrualn¹ kartê sieciow¹ co pozwala na przyk³adowo ³¹czenie siê do dwóch oddzielnych sieci wirtualnych, rodzajowy to ustawienie u¿ywane jest do budowania sieci VDE czy tunelowania UDP, sieæ NAT pozwala na dostêp do Internetu grupie maszyn witrulanej wystêouj¹cej w tej samej sieci, Cloud Network (experimental) eksperymentalna wersja wykorzystania sieci w chmurze Oracle'a, niepod³¹czona istnieje karta sieciowa ale nie jest tworzona ¿adna sieæ.
-Dalej mamy do wyboru typ karty: Intel PRO/1000 MT Desktop- dedykowana do WIndowsa i Linuxa, Intel PRO/1000 T Server- pasuje do Windowsa XP (ma wbudowane sterownik), Sieæ parawirtualizowana - tryb w której nie jest wirtualizowana ¿adna karta. Zostawiamy t¹ pierwsz¹.
+Dalej mamy do wyboru typ karty: Intel PRO/1000 MT Desktop- dedykowana do WIndowsa i Linuxa, Intel PRO/1000 T Server- pasuje do Windowsa XP (ma wbudowane sterownik), sieæ parawirtualizowann¹ - tryb w której nie jest wirtualizowana ¿adna karta. Zostawiamy t¹ pierwsz¹.
 Prócz tego mo¿emy nadaæ adres MAC.
+
 W portach szeregowych mo¿emy dodaæ porty, jednak my ich nie bêdziemy potrzebowaæ - nie bêdziemy pod³¹czaæ specjalistycznych urz¹dzeñ ani drukarek.
-Kontroler USB pozwala na wykrycie urz¹dzeñ po USB - zostawiamy w³¹czone
+Kontroler USB pozwala na wykrycie urz¹dzeñ po USB - wy³¹czamy.
+
 Udostêpnione foldery pozwalaj¹ na utworzenie folderu, który jest dostêpny i dla komputera i maszyny wirtualnej, nie dodajemy nie jest potrzebna.
 Interfejs u¿ytkownika personalizajca okna dooko³a naszej wirtualki - nic nie zmieniamy.
 
 Instalacja Debiana
-Uruchamiamy nasz¹ maszynê wirtualn¹, pokazuje siê instalator debiana -> wybieramy install, pokazuje nam wybór jêzyka - wybieram English poniewa¿ wiêkszosc poradników i dyskusji na forach jest w jêzyku angielski, tak¿e w razie spotaknia trudnosci ³atwiej wyszukuje siê rozwi¹zanie problemu.
-Przy wyborze kraju wybieram Polskê aby mieæ aktualny czas polski oraz u³atwi to systemowi zlokalizowanie najlepszego serwera, dalej wybieramy UK poniwa¿ Debian nie znajduje najlepszej opcji dla kombinacji English/Polski, dalej wybieramy klawiaturê polsk¹ aby mieæ dostêp do polskich znaków w razie potrzeby.
-Dalej wybieramy hostname ustawiam vitrualMachine, w nastêpnym oknie domain name nie wpisujemy nic nie korzystamy z zasobów danej domeny, nastêpnie ustawiamy has³o dla root'a. Dalej nadajê pe³n¹ nazwê u¿tkownika - wpisuje tak¿e vitualMachine, dalej podajê has³o u¿ytkownika- DLA BEZPIECZEÑSTWA INNE NI¯ ROOT.
-Wyskoczy nam okno dot. partycjonowania dysku, wybieram opcje Guided - use entire disk - dysk jest nowy na potrzeby tego zadania taka konfiguracaja jest wystarczaj¹ca. Dalej wybieramy nasz dysk sda 2.0 GB do partycjonowania, dalej finish partitioning na tym ekranie pokazuje nam jak dysk zostanie podzielony i ile pojemnosci dysków zosta³o przydzielonych do poszczególnych partycji - / 1.0 GB, klikamy finish partitonig, potwierdzamy i rozpoczyna siê instalacja systemu.
-Dalej instalator prosi nas o wybranie mirroringu archiw. Wybieram ftp.task.gda.pl s¹ to rekomendowane archiwa dla naszej lokalizacji, dalej pyta nas o proxy jednak w moim przypadku nie jest potrzebne.
+Uruchamiamy nasz¹ maszynê wirtualn¹, pokazuje siê instalator debiana
+->mamy do wyboru: 1. Graphical install, Install, 2.Advanced options, 3.Accessiblee dark contrast installer menu, 4. help, 5. Install with speech synthesis.
+
+1. Graphical install - instalacja, która wspiera obs³ugê myszy, zabiera wiêkszoœæ iloœæ zasobów, wszystko jest wyœwietlane w graficznym interfejsie.
+
+2. Advanced options - opcje zaawansowane instalacji, w której siê znajduj¹:
+2.1 Graphical expert install - graficzna instalacja ekspercka, pozwalaj¹ca na przyk³adowo pominiêcie niektórych kroków instalacji, posiada wiêcej opcji konfiguracji systemu operacyjnego.
+2.2 Graphical recue mode - tryb "ratowania" systemu w momencie zepsucia jakieœ funkcjonalnoœc, odpala nam live'a pozwalaj¹c za pomoc¹ narzêdzi naprawiæ system
+2.3 Graphical automated install - instalacja automatyczna dla np. wielu urz¹dzeñ w takiej samej konfiguracji, wystarczy przygotowaæ plik konfiguracyjny, a instalacja wykona siê automatycznie za³¹czaj¹c nasze wybory.
+2.4 Expert install - to samo co w 2.1 tylko bez interfejsu graficznego.
+2.5 Rescue mode - to samo co w 2.2 tylko bez interfejsu graficznego.
+2.6 Automated install - to samo co w 2.3 tylko bez interfejsu graficznego.
+2.7 Speech-enabled advanced options - opcje do ustawiania syntezatora mowy dla przyk³adowao osób niedowiz¹cych.
+
+3.Accessiblee dark contrast installer menu - umo¿liwa zmianê kontrastu instalatora
+
+4.Help - pomoc/dokumentacja instalatora
+
+5. Install with speech synthesis - instalator z syntezatorem mowy.
+
+-> wybieramy install, pokazuje nam wybór jêzyka - wybieram English poniewa¿ wiêkszoœæ poradników i dyskusji na forach jest w jêzyku angielski, tak¿e w razie spotaknia trudnosci ³atwiej wyszukuje siê rozwi¹zanie problemu.
+
+->Przy wyborze kraju wybieram Polskê aby mieæ aktualny czas polski oraz u³atwi to systemowi zlokalizowanie najlepszego serwera, dalej wybieramy klawiaturê United States, aby trzymaæ siê standardów znakowych, gdyby przyk³adowo nasz dysk trafi³ do innej maszyny gdzie nie ma klawiatury polskiej. Dalej wybieramy uk³ad klawiszy American English poniewa¿ jest dok³adnie taki sam jak w Polsce.
+
+->Dalej wybieramy hostname czyli nazwê maszyny, ustawiam vitrualMachine, w nastêpnym oknie domain name nie wpisujemy nic nie korzystamy z ¿adnej domeny, nastêpnie ustawiamy has³o dla root'a. Dalej nadajê pe³n¹ nazwê u¿ytkownika - wpisuje tak¿e vitualMachine, póŸniej takie samo jako nazwa u¿ytkownika, dalej podajê has³o u¿ytkownika- DLA BEZPIECZEÑSTWA INNE NI¯ ROOT.
+
+->Wyskoczy nam okno dot. partycjonowania dysku, mamy do wyboru: 1. Guided - use entire disk, 2. Guided - use entire disk and set up LVM, 3. Guided - use entire disk and set up encryped LVM, 4. Manual.
+
+1.Guided - use entire disk - prosimy ¿eby instalator automatycznie przeprowadzi³ nas przez partycjonowanie dysku.
+1.1 Instalator prosi nas o wybranie dysku docelowego. ->
+1.2.1 All files in one partiton - wszystko jest wrzucone na jedn¹ partycjê
+1.2.2 Separate /home partition - oddzielamy katalogi domowe u¿ytkowników, przydatne gdy reinstalujemy system a nie chcemy formatowaæ danych u¿ytkowników.
+1.2.3 Separate /home, /var and /tmp partitions - pozwala na oddzielenie tak jak w 1.2.2 oraz /var gdzie znajduj¹ siê logi, które mog¹ zapchaæ partycje systemow¹ oraz /tpm który jest u¿ywany do przechowywania plików tymczasowych.
+
+2. Guided - use entire disk and set up LVM - LVM mechanizmy pozwalaj¹cy u¿yæ wielu noœników danych np. dysk, pendrive  i dynamicznie modyfikowaæ te dyski - dysk po czêœci na jednym i po czêœci na drugim noœniku.
+2.1 Instalator prosi nas o wybranie dysku docelowego. ->
+2.2.1 All files in one partiton - tak jak w 1.2.1
+2.2.2 Separate /home partition - tak jak w 1.2.2
+
+3.Guided - use entire disk and set up encryped LVM - tak jak w 2, pozwala tak¿e na szyforwanie dysku
+3.1 Instalator prosi nas o wybranie dysku docelowego. ->
+3.2.1 All files in one partiton - tak jak w 1.2.1
+3.2.2 Separate /home partition - tak jak w 1.2.2
+
+4.Manual - rêczne konfiurowanie parycji systemu.
+4.1 Guided partitioning
+4.2 Configure iSCSI volumes - konifguracja dysku podpiêtego pod sieæ, wylistuje siê razem z dyskami fizycznymi->
+4.2.1 Log into iSCSI target - instalator prosi o podanie IP i portu aby dodaæ dyski sieciowe
+
+4.3 SCSI - fizyczny dysk maszyny -> instalator pyta czy dodaæ tablice partycji ->
+4.3.1 Guided partitioning
+4.3.2 Conifgure software RAID - mechanizmy powalaj¹ce na ró¿nego rodzaju ³¹czenia dysków np. dwa dyski jako jeden - zabezpieczenie przed utrat¹ danych
+4.3.3 Conifgure the Logical Volume Manager - tak jak w 2.
+4.3.4 Configure encrypted volumes - szyfrowanie dysku ->
+4.3.4.1 Opcje szyforwania takie jak: metoda szyfrowania, typ szyfrowania (aes, blowfish, serpent, twofish), wielkoœæ klucza (256, 192, 128), algorytm szyfruj¹cy (xts-plain64, cbc-essiv:sha256, cbc-plain, plain, ecb), klucz szyfrowania(passpharse, random key), czyszczenie zawartoœci dysku (tak, nie), flaga bootowania(w³¹czona, wy³¹czona), usuwanie partycji, potwierdzenie tworzenia partycji
+
+4.3.5 Conifgure iSCSI volumes - tak jak w 4.2
+4.3.6 Wyœwietlenie naszego dysku - jak jest podzielony
+4.3.7 Dostêpna czêœæ pamiêci do konfiguracji
+4.3.7.1 Create a new partiton - tworzenie nowej partycji (Primary(maks trzy - czwarta to logiczna, logical - nieograniczona iloœæ partycji)
+4.3.7.1.1 Wybieramy wielkoœæ partycji -> Wybieramy czy ma byæ Primary czy Logical -> czy ma byæ dodana na pocz¹tku czy na koñcu -> ustalamy system plików (w nowszych dystrybucjach linuxa domyœlna to ext4), mouting point, mounting options - pozwala na dodanie opcji - np. partycja bêdzie tylko do odczytu, etykieta, reserved blocks - miejsce pozwalaj¹ce na remapowanie dysków w celu naprawy lub na utrzymanie ma³ej przestrzeni aby system funkcjonowa³ p³ynnie, typical usage - pozwala na ustalenie jak bêdziê u¿ytowany nasz dysk w celu optymalizacji przetrzymwania metadanych, flaga bootuj¹ca - system gdy siê bootuje szuka parycji z flag¹ bootuj¹c¹ co pozwoli uruchomiæ system.
+
+4.3.7.2 Automatically partiton the free space - automatyczne partycjonowanie wolnej przestrzeni na dysku
+4.3.7.3 Show Cylider/Head Sector Information - pokazuje informacje jak na dysku rozmieszczone jest wolne miejsce np. zaczyna sie na (0,1,0) a koñczy na (32896,127,1).
+
+4.3.8 Undo changes to partitions - cofa nasze zmiany wzglêdem partycji
+4.3.9 Finish partitioning and write changes to disk - potwierdza nasze zminay na partycji
+
+4.4 Undo changes to partitions - tak jak w 4.3.8
+4.5 Finish partitioning and write changes to disk- tak jak w 4.3.9
+
+->wybieram opcje Guided - use entire disk - dysk jest nowy na potrzeby tego zadania taka konfiguracaja jest wystarczaj¹ca. Dalej wybieramy nasz dysk sda 2.0 GB do partycjonowania, dalej finish partitioning na tym ekranie pokazuje nam jak dysk zostanie podzielony i ile pojemnosci dysków zosta³o przydzielonych do poszczególnych partycji - / 1.0 GB, klikamy finish partitonig, potwierdzamy i rozpoczyna siê instalacja systemu.
+
+->Dalej instalator prosi nas o wybranie kraju w celu znalazienia najepszego serwera mirroringu archiw. Wybieram Polska, a potem ftp.task.gda.pl s¹ to rekomendowane archiwa dla naszej lokalizacji, dalej pyta nas o proxy jednak w moim przypadku nie jest potrzebne.
+
+->Na koñcu instalator pyta o instalacje œrodowiska graficznego wybieram standard system utilites, po instalacji pyta o instalacje GRUBa - boot loader - wybieram opcjê domyœl¹ czyli w MBR
+
 Po instalacji Debian wita nas ekranem startowym.
