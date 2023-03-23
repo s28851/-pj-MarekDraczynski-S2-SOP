@@ -3,8 +3,9 @@ Maszyna witrualna:
 	2. Wybieram opcje Typical zamiast Custom (Wiecej zaawansowanych opcji stawiania maszyny.), ponieważ potrzebuje tej maszyny tylko do przeprowadzenia instalacji debiana.
 	3. Wybieram opcje instalacji z ISO(obraz płyty), zamiast z dysku instalacyjnego lub zainstalowania systemu później ponieważ miałem już wybrany i przygotowany pobrany
 	obraz debiana.
-	4. Wybieram automatycznie przygotowaną nazwe maszyny ,,Debian 11.x 64-bit", i zmieniam lokalizacje z dysku C: na Dysk F: gdzie mam specjalnie przygotowany folder na VM, zmiana ta wynika z oszczędzania miejsca na ważniejsze rzeczy na dysku C:
-	5. Maksymalną wielkość dysku przeznaczam 2GB ponieiważ z dokumentacji debiania piszę że potrzebuje do 920GB do instalacji, dodatkowy 1GB, zostawiam jakbym, potrzebował
+	4. Wybieram automatycznie przygotowaną nazwe maszyny ,,Debian 11.x 64-bit", i zmieniam lokalizacje z dysku C: na Dysk F: gdzie mam specjalnie przygotowany folder na VM,
+zmiana ta wynika z oszczędzania miejsca na ważniejsze rzeczy na dysku C:
+	5. Maksymalną wielkość dysku przeznaczam 4GB ponieiważ z dokumentacji debiania piszę że potrzebuje do 920GB do instalacji, dodatkową pamięć zostawiam jakbym, potrzebował
 np. coś sprawdzić czy zainstalować jakieś paczki. Wybieram też trzymanie dysku wirtualnego jako jeden plik zamiast wielu, ponieważ nie planuje przenosić maszyny miedzy komupterami.
 	6. Zmianiam z rekomendowanych 2GB ram na 4GB, żeby instalacje przebiegła szybciej.
 	7. Pozostawiam już wybraną kartę sieciową NAT (przekierowanie zapytań przez hosta). Zamiast:
@@ -38,10 +39,12 @@ Instalacja Debiana:
 	9. Ustawiam nazwe dla użytkownika ,,Maciek", lubie personifikować
 	10. Sposób partycjonowania wyglądam Guided która odpowiada moim potrzebą i zajmuje cały dysk, ponieważ nie będę używał tej maszyny do niczego, potrzebuje tylko przeprowadzić instalacje.
 	Inne opcje:
-		*Guided - use entire disk and set up LVM - Zajmuje cały dysk i ustawia LVM czyli (z neta) ,,Logical Volume Manager (zarządca woluminów logicznych) – mechanizm systemu operacyjnego do zarządzania 					przestrzenią pamięci masowej. W szczególności, zarządca pozwala na połączenie partycji znajdujących się na różnych urządzeniach pamięci masowej w jeden dysk wirtualny."
+		*Guided - use entire disk and set up LVM - Zajmuje cały dysk i ustawia LVM czyli (z neta) ,,Logical Volume Manager (zarządca woluminów logicznych) – mechanizm systemu operacyjnego do zarządzania
+przestrzenią pamięci masowej. W szczególności, zarządca pozwala na połączenie partycji znajdujących się na różnych urządzeniach pamięci masowej w jeden dysk wirtualny."
 		*Guided - use entire disk and set up encrypted LVM - identyczna opcja jak ostatnia tyle że LVM jest zaszyfrowany.
 		*Manual - Samodziele przydzielenie partycji na dysku:
 			*Możliwość wybrania dysku na którym chce przydzielić partycje
+			*Configure iSCSI columes - pozwala podłączyć dyski sieciowe
 			*Po wybraniu przestrzeni dla partycji można wybrać jej wielkość
 			*Potem można wybrać między Primary(Partycja główna, Max 4) i logical(nie ograniczona ilość)
 			*System plików:
@@ -55,4 +58,43 @@ Instalacja Debiana:
 				częstym wyborem do serwerów bazodanowych.
 				*FAT16 - stary system plików 16 bitowy z windows95
 				*FAT32 - nowsza wersja FAT16 który przeszedł na 32bit'y co pozwoliło zwiększyć np. maksymalny rozmiar pliku z 2GB do 4GB
-				*
+				*swap area - partycja wspomagająca pamięć RAM
+				*Physical Volume for Encryption - partycja szyfrowana
+				*Physical Volume for RAID - RAID technologia łączenia kilku dysków twardych w jeden logiczny system
+				*physical volume for LVM - partycja z dynacimczym zarządzaniem woluminami
+			*Mount point - Umiejscowienie partycji w systemie logicznym plików.
+			*Mount options - Parametry określające sposób zamontowania partycji np. uprawnienia, prawa dostępu czy parametry wydajnościowe
+			*Label - nazwa partycji
+			*Reserved blocks - Ilośc zarezerwowanego miejsca na partycji dla metadanych (zazwyczaj około 1%-5%)
+			*Typical usage - Wielkość bloku w jednej inode(struktura opisujaca pliki w systemie). Optymalizuje dysk pod względem albo małych albo dużych plików
+			*Bootable flag - oznaczenie partycji z plikami rozruchowymi systemu
+			*Delete the partition - usuwa partycje
+			*Done setting up the partition - zapisuje ustawienia dla partycji
+	11. Opcja Guided podzieliła mi dysk na jedną partycje primary 3.3GB ext4 /
+logical 1GB swap. Pasuje mi ta konfiguracja więc zapisuje partycjonowanie. Monżna je też cofnąć
+	12. Potwierdzam partycjonowanie
+	13. Wybieram pierwszy zeskanowany package menager
+	14. Wbieram Polske
+	15. Serwer z pakietami wybieram politechnike - ftp.task.gda.pl
+	16. Serwer Proxy zostawiam pusty - Serwer Proxy najprościej serwer pośredni
+	17. Nie przystępuje do animowego udostępniania danych
+	18. Wybieram tylko standard system utilities ponieważ nic więcej nie potrzebuje
+	Inne Opjce:
+		*GNOME - domyślne środowisko graficzne w debianie
+		*KDE - przypominające windowsa
+		*Xfce - lekkie i szybkie środowisko graficzne, proste i wydajne
+		*LXDE - Srodowisko graficzne dla starszych urządzeń
+		*Cinnamon - Srodowisko oparte na biblitekach GNOME, Klasyczny interfejs i wiele narzędzi konfiguracyjnych
+		*MATE - Srodowisko oparte na biblitekach GNOME 2, Klasyczny interfejs i wiele narzędzi konfiguracyjnych
+		*LXQt - Minimalistyczne lekkie i szybkie środowisko
+		*GNOME Flashback - oparty na GNOME 2
+		*KDE Plasma - rozbudowane środowisko graficzne oferujace dużą gamę funckji
+		*WEB Server - serwer internetowy
+		*Standard System utilities - zestaw podstawowych narzędzi niezbędny do działania systemu
+	19. Nie instaluje dodatkowego boot leader'a, ponieważ nie planuje instalować innego systemu.
+	20. Gotowe, debian zainstalowany
+		
+		
+	
+	
+				
