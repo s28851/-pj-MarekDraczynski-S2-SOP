@@ -1,0 +1,12 @@
+2023-03-17
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-szczegolow dot. konfiguracji maszyny wirtualnej
+-instalacji Debiana
+
+Na zajeciach prowadzacy przedstawil plan nauczania na ten semestr, potem szczegolowo opisal instalacje Debiana na wirtualnej maszynie, opcje samego VirtualBoxa.
+
+Uwazam ze manualne konfigurowanie partycji sprawia mi jeszcze klopoty.
+
+Zaskakujace bylo ile mozliwosci konfiguracji ma wirtuala maszyna.
+
+Uwazam ze zajecia sa prowadzone przez bardzo kompetentna osobe, zadania wydaja sie czasochlonne i wymagajace, mam nadzieje ze dzieki temu moja wiedza dot. systemow operacyjnych bedzie wieksza. 
