@@ -1,0 +1,6 @@
+PATH - lista katalogów posiadających pliki wykonywalne, dzięki temu nie musimy do poleceń podawać całej scieżki do niego. 
+RANDOM - losowa liczba całkowita od 0 do 32767, przydatna do generowania "losowych" wartości w skryptach.
+PWD - scieżka do bieżącego miejsca w systemie w jakim w danym momencie jesteśmy. Przydatne do określenia/sprawdzania w jakim miejscu znajduje się obecnie użytkownik.
+USER - nazwa obecnego użytkownika, można wykorzystać w skryptach, np. do nazewnictwa plików w zależności jaki użytkownik je stworzy korzystając ze skryptu.
+HOSTNAME - nazwa komputera widoczna w sieci, możemy np. dostosowywać skrypt, by w zależności od tego na którym hoście jest wykonywany, jego działanie było inne.
+OSTYPE - typ systemu operacyjnego, może się przydać np. do limitowania działania jakiegoś skryptu tylko na wybranych systemach.
