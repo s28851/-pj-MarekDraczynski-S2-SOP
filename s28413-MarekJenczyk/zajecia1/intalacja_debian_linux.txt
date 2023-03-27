@@ -50,7 +50,7 @@
   
   2.2 Musze wybrać, jednorazowo bootowanie z napędu optycznego, ISO Debiana, po resecie, wciskam f12 i klikam c by wybrać wcześniej wspomniane bootwanie z płyty
   2.3 Wybieram "Instalacje tekstową", ponieważ nie tracić zasobów na graficznym
-  2.4 Oczywiście, wybieram język angielski
+  2.4 Oczywiście, wybieram język angielski, by przy jaki
   2.5 Lokalizacja - "Europe", i później "Poland"
   2.6 Język klawiatury - "American/English"
   2.7 Hostname i Domain name pozostawiam puste, ponieważ, nie posiadam domeny, ustwiam moje ulubione hasło rootowi, ustawiam nazwę użytkownikowi i dajhe mu hasło, oczywiście inne niż Root'owi
