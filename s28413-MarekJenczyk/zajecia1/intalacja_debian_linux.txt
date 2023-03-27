@@ -36,5 +36,22 @@
   1.22 W zakładke "Interfejs użytkownika" nie wszedłem bo nic tam nie chce zmieniać.
   1.23 W KOŃCU MOGĘ ODPALIĆ MASZYNE!!!
   
-  2. Instalowanie
- 
+2. Instalowanie Debiana:
+  2.1 Odpaliłem maszyne "Zwykły start" ponieważ nie chce by maszyna chodziła mi w tle.
+  2.2 Musze wybrać, jednorazowo bootowanie z napędu optycznego, ISO Debiana, po resecie, wciskam f12 i klikam c by wybrać wcześniej wspomniane bootwanie z płyty
+  2.3 Wybieram "Instalacje tekstową", ponieważ nie tracić zasobów na graficznym
+  2.4 Oczywiście, wybieram język angielski
+  2.5 Lokalizacja - "Europe", i później "Poland"
+  2.6 Język klawiatury - "American/English"
+  2.7 Hostname i Domain name pozostawiam puste, ponieważ, nie posiadam domeny, ustwiam moje ulubione hasło rootowi, ustawiam nazwę użytkownikowi i dajhe mu hasło, oczywiście inne niż Root'owi
+  2.8 Całe miejsce na dysku przypisuję na jednej partycji, ponieważ nigdy więcej i tak virtualki nie odpale
+  2.9 -Use entire disk and set up LVM - oznacza, że możemy utworzyć partycję na cały dysk z LVM, który odpowiwada za zarządzanie przestrzenią
+  2.10 - Use enitre disk and set up encrypted LVM - oznacza to samo co wyżej tylko jest szyfrowane
+  2.11 Wybieram Ext4 jako system plików, najnowsza i najlepsza wersja
+  2.12 Nie chce wybrać żadnej płyty, więc pomijam opcje jej wybrania
+  2.13 Mirror Server, oczywiście daje na PG, najbliżej więc najszybciej (ftp.task.gda.pl)
+  2.14 Nie chce i nie potrzebuję proxy, więc pomnijam
+  2.15 Nie chce żeby zabierało mi statystyyki więc daje na nie
+  2.16 Software pozostawiam domyślnie, a no i instuluje jeszcze serwer SSH
+  2.17 Żeby uruchomić system instaluje boot loadera GRUB
+  2.18 W końcu koniec męczarni
