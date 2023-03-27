@@ -37,7 +37,17 @@
   1.23 W KOŃCU MOGĘ ODPALIĆ MASZYNE!!!
   
 2. Instalowanie Debiana:
-  2.1 Odpaliłem maszyne "Zwykły start" ponieważ nie chce by maszyna chodziła mi w tle.
+  2.1 Uruchomiłem maszynę, ukazuję się instalator debiana, do wyboru kilka opcji:
+  2.1.1 Graphical Install - graficzny interfejs, więcej pobierania zasobów, a tego nie chce.
+  2.1.2 W Advanced Options, możemy ujrzeć jeszcze kilka opcji:
+  2.1.2.1: Graphical exper install - większa konfiguracja Debiana w graficznym interfejsie
+  2.1.2.2 Graphical recue mode - gdy system się zepsuję, pozwala nam go naprawić w interfejsie graficznym
+  2.1.2.3 Graphical automated install - instualuje sie automatycznie na kilku urządzieniach w takiej samej konfiguracji. Trzeba tylko zrobić plik konfiguracyjny.
+  2.1.2.4 Expert install - większa konfiguracja Debiana, lecz bez interfejsu graficznego
+  2.1.2.5 Rescue mode - gdy system się zepsuje, pozwala nam go naprawić, ale bez interfesju graicznego
+  2.1.2.6 Automated install - instaluje sie automatycznie to samo co w 2.1.2.3 ale też bez interfejsu graficznego
+  2.1.2.7 Speech-enabled advenced options - syntezator mowy dla osób niedowidzących
+  
   2.2 Musze wybrać, jednorazowo bootowanie z napędu optycznego, ISO Debiana, po resecie, wciskam f12 i klikam c by wybrać wcześniej wspomniane bootwanie z płyty
   2.3 Wybieram "Instalacje tekstową", ponieważ nie tracić zasobów na graficznym
   2.4 Oczywiście, wybieram język angielski
