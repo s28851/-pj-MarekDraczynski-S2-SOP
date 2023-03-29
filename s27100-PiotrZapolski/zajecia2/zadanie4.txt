@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# wykonanie komendy ls -l w podpowłoce i przypisanie wyniku do zmiennej X
+X=$(ls -l)
+
+# wyświetlenie zawartości zmiennej X z zachowaniem formatowania
+echo -e "${X}"
+
+
+Wykorzystując opcję -e dla komendy echo, wypisujemy zawartość zmiennej X z zachowaniem oryginalnego formatowania. W ten sposób uzyskujemy taki sam wygląd jak przy wykonaniu komendy ls -l bezpośrednio w terminalu. Użycie $X w echo spowodowałoby utratę formatowania, ponieważ zawartość zmiennej zostanie wypisana jako jeden ciąg znaków bez zachowania oryginalnej struktury.

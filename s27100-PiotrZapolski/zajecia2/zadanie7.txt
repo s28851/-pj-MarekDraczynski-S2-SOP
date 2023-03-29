@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Sprawdzenie, czy skrypt został wywołany z argumentem
+if [ $# -eq 0 ]; then
+    echo "Podaj nazwę pliku jako argument skryptu"
+    exit 1
+fi
+
+# Odczytanie pliku do zmiennej
+TEKST=$(cat $1)
+
+# Zamiana każdego wystąpienia Piotra na podświetlony na czerwono napis
+echo "${TEKST//Piotr/\\e[41mPiotr\\e[0m}"
+Skrypt najpierw sprawdza, czy został wywołany z argumentem, a następnie odczytuje zawartość pliku do zmiennej TEKST, korzystając z komendy cat. Na końcu skrypt zamienia każde wystąpienie tekstu Piotr na napis podświetlony na czerwono

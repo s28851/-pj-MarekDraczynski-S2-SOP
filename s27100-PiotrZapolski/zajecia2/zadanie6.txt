@@ -1,0 +1,11 @@
+#!/bin/bash
+
+name=$1
+
+if [[ $name == *[aiueoąęy] ]]; then
+  echo "${name} ma kota, a kot ma ${name}ę" | sed 's/ę$/a/'
+else
+  echo "${name} ma kota, a kot ma ${name}a" | sed 's/a$/ę/'
+fi
+
+W przypadku, gdy imię kończy się na samogłoskę, używamy sed do zamiany końcówki "ę" na "a". Natomiast, gdy imię kończy się na spółgłoskę, zamieniamy końcówkę "a" na "ę".

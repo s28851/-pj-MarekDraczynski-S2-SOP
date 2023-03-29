@@ -1,0 +1,5 @@
+W pierwszej serii poleceń wartość zmiennej X zostaje wypisana, ale po przejściu do powłoki bash, wartość X nie jest dostępna, więc drugie polecenie "echo" wypisuje pustą wartość.
+
+W drugiej serii poleceń wartość zmiennej X zawiera spacje, co powoduje, że powłoka traktuje każde słowo jako oddzielną zmienną. Można to naprawić, umieszczając wartość zmiennej X w cudzysłowach lub apostrofach.
+
+W trzeciej serii poleceń, podwójne cudzysłowy pozwalają na osadzenie zmiennych i specjalnych znaków wewnątrz ciągu znaków, a pojedyncze apostrofy traktują cały ciąg znaków dosłownie, bez interpretowania specjalnych znaków i zmiennych.
