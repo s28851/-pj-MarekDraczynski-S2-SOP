@@ -20,7 +20,10 @@ fi
 
 # Wyświetlenie tekstu z użyciem zmiennej KONCOWKA
 echo "$IMIE ma kota, a kot ma ${IMIE}${KONCOWKA}"
-Skrypt sprawdza, czy został wywołany z argumentem, a następnie pobiera imię z argumentu i ustawia końcówkę w zależności od płci imienia. Następnie skrypt wyświetla tekst, używając zmiennej KONCOWKA, aby poprawnie odmienić imię. Skrypt działa dla imion żeńskich i męskich, o ile imiona te nie są specjalnymi przypadkami z nietypowym odmienianiem.
+Skrypt sprawdza, czy został wywołany z argumentem, a następnie pobiera imię z argumentu
+i ustawia końcówkę w zależności od płci imienia. Następnie skrypt wyświetla tekst, używając zmiennej KONCOWKA,
+aby poprawnie odmienić imię. Skrypt działa dla imion żeńskich i męskich,
+o ile imiona te nie są specjalnymi przypadkami z nietypowym odmienianiem.
 
 B.
 
@@ -41,4 +44,7 @@ echo "Ostatni znak: ${TEKST: -1}"
 
 # Zamiana tekstu SOP na odpowiedni kod koloru
 echo "${TEKST//SOP/\e[32mSOP\e[0m}"
-Skrypt najpierw sprawdza, czy został wywołany z argumentem, a następnie pobiera ten argument do zmiennej TEKST. Następnie skrypt wypisuje pierwszy i ostatni znak z argumentu, korzystając z podstawienia napisów. Na końcu skrypt zamienia każde wystąpienie tekstu SOP na kod koloru, korzystając z podstawienia napisów i wykorzystując odpowiednią sekwencję kodu ANSI dla koloru zielonego.
+Skrypt najpierw sprawdza, czy został wywołany z argumentem, a następnie pobiera ten argument do zmiennej TEKST.
+Następnie skrypt wypisuje pierwszy i ostatni znak z argumentu, korzystając z podstawienia napisów.
+Na końcu skrypt zamienia każde wystąpienie tekstu SOP na kod koloru,
+korzystając z podstawienia napisów i wykorzystując odpowiednią sekwencję kodu ANSI dla koloru zielonego.
