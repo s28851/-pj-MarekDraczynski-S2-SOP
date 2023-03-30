@@ -1,0 +1,4 @@
+04-03-2023
+
+Dzisiaj nauczyłem się instalować system Debian używając do tego narzędzia "VirtualBox" oraz poznałem jego minimalne wymagania systemowe i opcje podczas isntalacji.
+Dowiedziałem się też, że "każdy szanujący się inżynier" nie będzie przeprowadzał tej instalacji w trybie GUI, aczkolwiek uważam to za subiektywną opinię gdyż każdy robi jak mu wygodnie.
