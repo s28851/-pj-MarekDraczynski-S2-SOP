@@ -25,9 +25,9 @@ Instalacja systemu operacyjnego Debian.
 	6. Hostname, czyli jak widoczny będzie maszyna w sieci ustawiam na test-debian, jakąs nazwę w końcu trzeba dać.
 	7. Domeny nie ustawiam, bo nie korzystam i nie mam takowej nigdzie skonfigurowanej.
 	8. Ustawiam hasło dla roota, oraz tworze swoje wlasne konto.
-	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał część plików.Partycji swap nie tworzę, gdyż mam wystarczająca zapas 	pamięci RAM, a maszyna nie będzie służyć do zaawansowanych i obciążających celów. W Guided partitioning możemy wybrać, by automatycznie	
-	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), oraz to
-	samo co wcześniej tylko z zaszyfrowanym LVM. Obie partycję są tworzone jako primary, gdyż nie mam więcej niz 4.
+	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał 		część plików.
+	Partycji swap nie tworzę, gdyż mam wystarczająca zapas pamięci RAM, a maszyna nie będzie służyć do zaawansowanych i obciążających celów. W Guided partitioning 		możemy wybrać, by automatycznie	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na 		zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), 
+	oraz to samo co wcześniej tylko z zaszyfrowanym LVM. Obie partycję są tworzone jako primary, gdyż nie mam więcej niz 4.
 	10. System plików wybieram Ext4 - najnowsza wersja ext, ma większe limity pojemności niż poprzednie, jest wstecznie kompatybilny ze starszymi wersjami, ma lepszą wydajność oraz wieksza ilość obsługiwanych podfolderów. Posiada 	również księgowanie, czyli dane zapisywane są w "dzienniku", zanim zostaną zapisane na dysk, więc zmniejsza się ryzyky utraty danych. Przykładowo jeśli nasz komputer wyłączy się w trakcie procesu zapisywania, zostanie on 	dokończony po jego ponownym uruchomieniu, lub stracimy tylko zmiany wprowadzone, ale plik oryginalny wciąż będzie dostępny.  
 		Pozostałe opcje:
 		-  Ext3 - poprzednik ext4, mniejsza wydajność i limity, również posiada mechanizm księgowania
