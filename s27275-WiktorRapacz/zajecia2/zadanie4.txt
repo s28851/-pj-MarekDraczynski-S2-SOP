@@ -1,0 +1,10 @@
+Skrypt:
+
+#!/bin/bash
+X=$(ls -l)
+echo "$X"
+
+Żeby zachować formatowanie i kolory należy użyć "$X" zamiast $X,
+ponieważ wtedy wynik polecenia "ls -l" jest wyświetlany słowo po słowie,
+jednak gdy się użyje "$X", polecenie echo wyświetli cały wynik komendy jako,
+jeden spójny ciąg znaków.

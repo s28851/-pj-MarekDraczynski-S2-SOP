@@ -1,0 +1,49 @@
+5a)
+
+1) 
+źle:
+	A=Ala
+	echo $A ma kota, a kot ma ${A}ę
+
+naprawiony:
+	A=Al
+	echo ${A}a ma kota, a kot ma ${A}ę
+2)
+
+#!/bin/bash
+
+# Sprawdzenie czy został podany argument
+if [ -z "$1" ]; then
+  echo "Brak podanego argumentu."
+  exit 1
+fi
+
+name=$1
+len=${#name}
+
+# Sprawdzenie, czy imię jest żeńskie
+if [[ $name == *"a" ]]; then
+  name=${name::$len-1}
+  echo "${name}a ma kota, a kot ma ${name}ę"
+
+# Jesli imie nie jest kobiecie uznaje je za meskie
+else
+  echo "$name ma kota, a kot ma ${name}a"
+fi
+
+
+5b)
+
+#!/bin/bash
+
+# sprawdzenie czy podano argument
+if [ -z "$1" ]; then
+  echo "Nie podano argumentu"
+  exit 1
+fi
+
+echo "Pierwszy znak: ${1:0:1}"
+
+echo "Ostatni znak: ${1: -1:1}"
+
+echo -e "${1//SOP/\\e[32mSOP\\e[0m}"

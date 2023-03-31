@@ -1,0 +1,20 @@
+PATH - przechowuje listę katalogów, w których system operacyjny szuka plików wykonywalnych (poleceń).
+Wynik: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+
+RANDOM - przechowuje losową liczbę całkowitą od 0 do 32767. Wynik może być używany do generowania wartości losowych w skryptach.
+Wynik: 28776
+
+PWD - rzechowuje bieżący katalog roboczy (pełna ścieżka). Wynik opisuje aktualne położenie w systemie plików.
+Wynik: /home/wrapacz/skrypty
+
+PS1 - przechowuje wartość zmiennej środowiskowej, która definiuje format wiersza poleceń (prompt).
+Wynik:
+
+USER - przechowuje nazwę użytkownika, który uruchomił bieżącą sesję.
+Wynik: wrapacz
+
+HOSTNAME - przechowuje nazwę hosta (nazwę komputera), na którym działa bieżąca sesja.
+Wynik: blackWorker
+
+OSTYPE - przechowuje nazwę typu systemu operacyjnego, który jest używany.
+Wynik: linux-gnu
