@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Sprawdzenie, czy podano argument
+if [ -z "$1" ]; then
+  echo "Brak argumentu"
+  exit 1
+fi
+
+# Sprawdzenie, czy podany plik istnieje
+if [ ! -f "$1" ]; then
+  echo "Plik nie istnieje"
+  exit 1
+fi
+
+# Wczytanie zawartosci pliku
+text=$(cat $1)
+
+# Podmiana na czerwony
+# s(podmiana tesktu)/Co ma być podmienione/Na co/g(globalnie)I(nie czułe na wielkosc liter)
+text=$(echo "$text" | sed 's/Wiktor/\o033[31m&\o033[0m/gI')
+
+echo -e "$text"

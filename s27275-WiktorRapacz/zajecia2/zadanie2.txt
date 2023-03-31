@@ -1,0 +1,60 @@
+1. Po uruchomieniu poniższego skryptu, pojawia się tylko raz napis tekst
+
+X=tekst
+echo $X
+bash
+echo $X
+
+Dzieje się tak ponieważ, wpierw zapisujemy do zmiennej X wartość tekst.
+Wypisujemy zmienną, i poleceniem bash uruchamiamy nową powłokę w której,
+zmienna X nie ma już zdeklarowanej wartości, dlatego kolejny raz tekst się,
+nie wyświetla.
+
+
+2. Po uruchomieniu poniższego skryptu pojawia się ./z2.sh: line 1: dłuższy: command not found
+
+X=Tekst dłuższy
+echo $X
+
+w celu naprawy trzeba wartość jaką chcemy zapisać do zmiennej otulić aposrofami (''), albo cudzysłowiem ("").
+Błąd który wyskoczył wynika z tego, że przypisujemy tylko wartość ,,Tekst" a po spacji powłoka,
+interpretuje wratość dłuższy jako komende której nie może znaleźć. Skrypt po naprawie:
+
+X="Tekst dłuższy"
+echo $X
+
+
+3. Wynik:
+
+tekst:Tekst 1
+tekst:$X
+tekst:Tekst 1
+
+Skrypt:
+
+X="Tekst 1"
+Y="tekst:$X"
+echo "$Y"
+Y='tekst:$X'
+echo "$Y"
+Y=tekst:$X
+echo "$Y"
+
+Wniosek:
+Gdy używa się cudzysłowa ("), inaczej jest interpretowany ciąg znaków,
+następuje wtedy przypisanie do zmiennych ich wartości. Gdy jednak,
+użyje się apostrofów ('), odwołanie do zmiennej zostanie potraktowane jako zwykły ciąg znaków.
+
+
+4.Skrypt przed naprawą:
+
+A=Ala
+echo $A ma kota, a kot ma ${A}ę
+
+Skrypt po naprawie:
+
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+
+Nawiasy klamrowę potrafią oddzielić nazwę zmiennej od tekstu dla powłoki,
+dzięki czemu możemy w prosty sposób formatować łączenie wartości zmiennych i ciągów znaków 
