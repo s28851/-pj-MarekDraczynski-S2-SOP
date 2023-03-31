@@ -1,1 +1,25 @@
+5a.
+
+#!/bin/bash
+
+if [ $# -gt 1 ]; then
+  echo "Za dużo argumentów"
+else
+  imie=$1
+  if [ -z "$imie" ]; then
+    echo "Nie podano imienia kota."
+  else
+    len=${#imie}
+    len=$((len-1))
+    imie2=${imie::$len}
+    echo -n "${imie} ma kota, a kot ma "
+    if [ "${imie:$len}" == "a" ]; then
+      echo "${imie2}ę"
+    else
+      echo "${imie}a"
+    fi
+  fi
+fi
+
+5b.
 
