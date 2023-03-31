@@ -1,0 +1,2 @@
+Nie będzie Dobrego rezultatu ze wględu na to że ls -l zawiera znaki specjalne które są interpretowane przez basha,
+żeby działało poprawnie wystarczy wrzucić X w cudzysłów echo "$X".
