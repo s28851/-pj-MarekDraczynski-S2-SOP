@@ -1,0 +1,5 @@
+2023-03-05
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+- Istalacji Systemu Operacyjnego Debian
+- Jak mądrze zarządzać zasobami (Przydzielanie odpowiedniej wartości RAM'u oraz Dysku)
+- Jakie konsekwencje niesie za sobą przydzielenie za dużej wartości jednej z wyżej wymienionych opcji

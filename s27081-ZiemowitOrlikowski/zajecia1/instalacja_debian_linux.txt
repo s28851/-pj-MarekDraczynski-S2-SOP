@@ -1,0 +1,119 @@
+Zadaniem jest skonfigrowanie maszyny wirtualnej oraz instalacja systemu operacyjego Linux Debian
+
+Po kliknieciu nowa maszyna nadajemy jej nazwe w sekcji Name, w sekcji Machine Folder wybieramy folder, w której ma się znajdować nasza maszyna. Nastepnie wybieramy typ systemu - w naszym przpadku jest to Linux oraz Wersje systemu - Debian 64-bit zgodnie z architekturą naszego procesora
+
+W kolejnym kroku przydzielamy pamięć RAM dla naszej maszyny, według dokumentacji minimalne wymagania to 64 MB pamięci, ja dysponuję sprzętem z 32 GB RAM i w celu przyspieszenia procesu instalacji ustawiam 2GB - po instalaji to ustwaienie zmniejsze.
+
+Dalej mam możlwosc nie dodawania wirtualnego dysku twardego, stworzenia wirtulanego dysku albo dodania już istniejącego dysku. Ja wybieram stworzenie dysku aby mieć gdzie zainstalować system.
+
+W trakcie tworzenia można wybrac VDI - dysk przystosowany do srodowiska VirtualBox, VHD - dysk witualny wykorzystywany m.in. przez Hyper-V albo VMDK - który może przechowywać obraz maszyny i jej dane.
+
+Do moich potrzeb wystarczy VDI, dalej można wybrać dynamicznie rozdzielany- dysk rozszerza się z przypływem danych, oraz stały rozmiar - z góry zakładamy ile maszyna powinna mieć pamięci. Wybieram stały rozmiar, wolę stale okreslony rozmiar dysku, zapewnia mi to większą "kontrolę" nad iloscią danych i zużyciem dysku. Dalej mamy do okreslenia lokalizacje naszego dysku wirtualnego oraz jego wielkosc, wedlug dokumetacji wystarzczy 1 GB, ja dam 2GB na ewnetulane aktualizacje.
+
+Po kliknięciu utwórz nasza maszyna została dodana do listy maszyn.
+
+Przejdzmy do ustawień maszyny
+W ustawieniach ogólnych mamy możlwosc zmiany nazwy, typu wersji maszyny, konfiguracji folderów migawek - migawka pozwala na zapisanie stanu maszyny i cofniącia się do niego w dowolnym momencie po restarcie, współdzielony schowek z naszym komputerem, przeciąganie i upuszczanie plików od razu do maszyny wirtualnej, opis oraz szyfrowanie dysku, które nie będzie nam na tym etapie potrzebne.
+
+W zakładce system->płyta główna możemy edytować RAM przydzielony do maszyny, wybrać kolejnosc bootowania - ja wyłączam floppy i daje napęd na pierwsze miejsce ponieważ musimy zainstalować system z witrualnej płyta. Dalej mamy chipset PIIX3 lub ICH9 - wybieram PIIX3 ponieważ system nie jest na tyle złożony aby wybierać mocniejszy, w urządzeniu wskazującym daje Mysz PS/2 jest w 100% wystarczjąca do naszego użytku. W zakładce Procesor wybieram jeden procesor i 100% użycia aby instalacja przebiegła sprawnie, dalej mamy do wyboru włączenie PAE/NX - nie będzie nam potrzebne nasz system nie jest 32-bitowy oraz Nested VT-x też zostawiamy wyłączone nie będziemy robić witrualizacji na naszej maszynie wirtualnej.
+
+Zakładka ekran zawiera przydzielenie pamięci wideo - potrzebna przy doborze rozdzielczosci i użytku układu graficznego w naszej maszynie, zostawiam na 16 MB, które wystarczą. Liczba monitorów także jeden jest wystarczająca. Współczynnik skali zostawiamy na 100% nie potrzebujemy skalowania obrazu aby był większy. Kontroler graficzny zostawiamy na VMSVGA jest domyslny dla Linuxowch srodowisk, VboxVGA jest dedykowany dla Vitualboxa dla Windowsów 7 w dół ooraz VBoxSVGA standardowy dla Windowsa.
+
+Możemy wyłączyć też zdalny pulpit co pozwala zdalnie łączyć się przeez maszynę, wystarczy ustawić port, metode uwierzytelniania limit ile czasu maksymalnie może się logować oraz czy wiele maszyn może się łączyć.
+
+Nagrywanie można także włączyć wystarczy ustalić scieżkę do pliku czy ma być nagrywany dzwięk oraz jakosć i ile klatek ma być nagrywane.
+
+W pamięci musimy dodać kontroler IDE z naszą płytą instalcyjną Debiana, klikamy  na płytkę wybieramy nasz plik .iso z debianem i klikamy dodaj. Mamy opcje Live CD/DVD którą zostawiamy odznaczoną, pozwala ona na "pozostawienie" płyty w napędzie nawet po wyjęciu i restarcie. Poniżej mamy Kontrole SATA gdzie znajdują się nasze zamontowane dyski czyli w naszym przypadku ten, który stworzylismy w trakcie stawiana maszyny wirtualnej.
+
+Dzwięk pozwala na włączenie dzwieku z maszyny wirtulanej, mamy do wyboru stertownik dzwieku gospodarza: windows DirectSound oraz zerowy sterownik dzwięku, wybieramy Windowsowy - jest to uniwersalny sterownik pozwalający na przechwycenie dzwięku, dalej mamy kontrolery audio różnią się między sobą wartosciami przy kodowaniu i dekodowaniu dla stereo - przykładowo AC97 pozwala nam na szesć kanałów a Intel HD Audio na osiem, dalej mamy rozszerzeia Audio output - zostawiamy włączone, oraz Audio input - zostawiamy wyłączone nie będziemy używać mirkofonów lub kamer z mikrofonem.
+
+W sieci możemy włączyć do czterech kart sieciowych - my bierzemy tylko jedną na trybie NAT, aby mieć dostęp do sieci. Prócz tego mamy do wyboru mostkowaną sieciową- witualka jest na równi z naszym komputerem, sieć wewnętrzną - maszyna nie ma komunikacji poza swoją sieć, izolowana dodaje do naszego komputera dodatkową witrualną kartę sieciową co pozwala na przykładowo łączenie się do dwóch oddzielnych sieci wirtualnych, rodzajowy to ustawienie używane jest do budowania sieci VDE czy tunelowania UDP, sieć NAT pozwala na dostęp do Internetu grupie maszyn witrulanej wystęoującej w tej samej sieci, Cloud Network (experimental) eksperymentalna wersja wykorzystania sieci w chmurze Oracle'a, niepodłączona istnieje karta sieciowa ale nie jest tworzona żadna sieć.
+Dalej mamy do wyboru typ karty: Intel PRO/1000 MT Desktop- dedykowana do WIndowsa i Linuxa, Intel PRO/1000 T Server- pasuje do Windowsa XP (ma wbudowane sterownik), sieć parawirtualizowanną - tryb w której nie jest wirtualizowana żadna karta. Zostawiamy tą pierwszą.
+Prócz tego możemy nadać adres MAC.
+
+W portach szeregowych możemy dodać porty, jednak my ich nie będziemy potrzebować - nie będziemy podłączać specjalistycznych urządzeń ani drukarek.
+Kontroler USB pozwala na wykrycie urządzeń po USB - wyłączamy.
+
+Udostępnione foldery pozwalają na utworzenie folderu, który jest dostępny i dla komputera i maszyny wirtualnej, nie dodajemy nie jest potrzebna.
+Interfejs użytkownika personalizajca okna dookoła naszej wirtualki - nic nie zmieniamy.
+
+Instalacja Debiana
+Uruchamiamy naszą maszynę wirtualną, pokazuje się instalator debiana
+->mamy do wyboru: 1. Graphical install, Install, 2.Advanced options, 3.Accessiblee dark contrast installer menu, 4. help, 5. Install with speech synthesis.
+
+1. Graphical install - instalacja, która wspiera obsługę myszy, zabiera większość ilość zasobów, wszystko jest wyświetlane w graficznym interfejsie.
+
+2. Advanced options - opcje zaawansowane instalacji, w której się znajdują:
+2.1 Graphical expert install - graficzna instalacja ekspercka, pozwalająca na przykładowo pominięcie niektórych kroków instalacji, posiada więcej opcji konfiguracji systemu operacyjnego.
+2.2 Graphical recue mode - tryb "ratowania" systemu w momencie zepsucia jakieś funkcjonalnośc, odpala nam live'a pozwalając za pomocą narzędzi naprawić system
+2.3 Graphical automated install - instalacja automatyczna dla np. wielu urządzeń w takiej samej konfiguracji, wystarczy przygotować plik konfiguracyjny, a instalacja wykona się automatycznie załączając nasze wybory.
+2.4 Expert install - to samo co w 2.1 tylko bez interfejsu graficznego.
+2.5 Rescue mode - to samo co w 2.2 tylko bez interfejsu graficznego.
+2.6 Automated install - to samo co w 2.3 tylko bez interfejsu graficznego.
+2.7 Speech-enabled advanced options - opcje do ustawiania syntezatora mowy dla przykładowao osób niedowizących.
+
+3.Accessiblee dark contrast installer menu - umożliwa zmianę kontrastu instalatora
+
+4.Help - pomoc/dokumentacja instalatora
+
+5. Install with speech synthesis - instalator z syntezatorem mowy.
+
+-> wybieramy install, pokazuje nam wybór języka - wybieram English ponieważ większość poradników i dyskusji na forach jest w języku angielski, także w razie spotaknia trudnosci łatwiej wyszukuje się rozwiązanie problemu.
+
+->Przy wyborze kraju wybieram Polskę aby mieć aktualny czas polski oraz ułatwi to systemowi zlokalizowanie najlepszego serwera, dalej wybieramy klawiaturę United States, aby trzymać się standardów znakowych, gdyby przykładowo nasz dysk trafił do innej maszyny gdzie nie ma klawiatury polskiej. Dalej wybieramy układ klawiszy American English ponieważ jest dokładnie taki sam jak w Polsce.
+
+->Dalej wybieramy hostname czyli nazwę maszyny, ustawiam vitrualMachine, w następnym oknie domain name nie wpisujemy nic nie korzystamy z żadnej domeny, następnie ustawiamy hasło dla root'a. Dalej nadaję pełną nazwę użytkownika - wpisuje także vitualMachine, później takie samo jako nazwa użytkownika, dalej podaję hasło użytkownika- DLA BEZPIECZEŃSTWA INNE NIŻ ROOT.
+
+->Wyskoczy nam okno dot. partycjonowania dysku, mamy do wyboru: 1. Guided - use entire disk, 2. Guided - use entire disk and set up LVM, 3. Guided - use entire disk and set up encryped LVM, 4. Manual.
+
+1.Guided - use entire disk - prosimy żeby instalator automatycznie przeprowadził nas przez partycjonowanie dysku.
+1.1 Instalator prosi nas o wybranie dysku docelowego. ->
+1.2.1 All files in one partiton - wszystko jest wrzucone na jedną partycję
+1.2.2 Separate /home partition - oddzielamy katalogi domowe użytkowników, przydatne gdy reinstalujemy system a nie chcemy formatować danych użytkowników.
+1.2.3 Separate /home, /var and /tmp partitions - pozwala na oddzielenie tak jak w 1.2.2 oraz /var gdzie znajdują się logi, które mogą zapchać partycje systemową oraz /tpm który jest używany do przechowywania plików tymczasowych.
+
+2. Guided - use entire disk and set up LVM - LVM mechanizmy pozwalający użyć wielu nośników danych np. dysk, pendrive  i dynamicznie modyfikować te dyski - dysk po części na jednym i po części na drugim nośniku.
+2.1 Instalator prosi nas o wybranie dysku docelowego. ->
+2.2.1 All files in one partiton - tak jak w 1.2.1
+2.2.2 Separate /home partition - tak jak w 1.2.2
+
+3.Guided - use entire disk and set up encryped LVM - tak jak w 2, pozwala także na szyforwanie dysku
+3.1 Instalator prosi nas o wybranie dysku docelowego. ->
+3.2.1 All files in one partiton - tak jak w 1.2.1
+3.2.2 Separate /home partition - tak jak w 1.2.2
+
+4.Manual - ręczne konfiurowanie parycji systemu.
+4.1 Guided partitioning
+4.2 Configure iSCSI volumes - konifguracja dysku podpiętego pod sieć, wylistuje się razem z dyskami fizycznymi->
+4.2.1 Log into iSCSI target - instalator prosi o podanie IP i portu aby dodać dyski sieciowe
+
+4.3 SCSI - fizyczny dysk maszyny -> instalator pyta czy dodać tablice partycji ->
+4.3.1 Guided partitioning
+4.3.2 Conifgure software RAID - mechanizmy powalające na różnego rodzaju łączenia dysków np. dwa dyski jako jeden - zabezpieczenie przed utratą danych
+4.3.3 Conifgure the Logical Volume Manager - tak jak w 2.
+4.3.4 Configure encrypted volumes - szyfrowanie dysku ->
+4.3.4.1 Opcje szyforwania takie jak: metoda szyfrowania, typ szyfrowania (aes, blowfish, serpent, twofish), wielkość klucza (256, 192, 128), algorytm szyfrujący (xts-plain64, cbc-essiv:sha256, cbc-plain, plain, ecb), klucz szyfrowania(passpharse, random key), czyszczenie zawartości dysku (tak, nie), flaga bootowania(włączona, wyłączona), usuwanie partycji, potwierdzenie tworzenia partycji
+
+4.3.5 Conifgure iSCSI volumes - tak jak w 4.2
+4.3.6 Wyświetlenie naszego dysku - jak jest podzielony
+4.3.7 Dostępna część pamięci do konfiguracji
+4.3.7.1 Create a new partiton - tworzenie nowej partycji (Primary(maks trzy - czwarta to logiczna, logical - nieograniczona ilość partycji)
+4.3.7.1.1 Wybieramy wielkość partycji -> Wybieramy czy ma być Primary czy Logical -> czy ma być dodana na początku czy na końcu -> ustalamy system plików (w nowszych dystrybucjach linuxa domyślna to ext4), mouting point, mounting options - pozwala na dodanie opcji - np. partycja będzie tylko do odczytu, etykieta, reserved blocks - miejsce pozwalające na remapowanie dysków w celu naprawy lub na utrzymanie małej przestrzeni aby system funkcjonował płynnie, typical usage - pozwala na ustalenie jak będzię użytowany nasz dysk w celu optymalizacji przetrzymwania metadanych, flaga bootująca - system gdy się bootuje szuka parycji z flagą bootującą co pozwoli uruchomić system.
+
+4.3.7.2 Automatically partiton the free space - automatyczne partycjonowanie wolnej przestrzeni na dysku
+4.3.7.3 Show Cylider/Head Sector Information - pokazuje informacje jak na dysku rozmieszczone jest wolne miejsce np. zaczyna sie na (0,1,0) a kończy na (32896,127,1).
+
+4.3.8 Undo changes to partitions - cofa nasze zmiany względem partycji
+4.3.9 Finish partitioning and write changes to disk - potwierdza nasze zminay na partycji
+
+4.4 Undo changes to partitions - tak jak w 4.3.8
+4.5 Finish partitioning and write changes to disk- tak jak w 4.3.9
+
+->wybieram opcje Guided - use entire disk - dysk jest nowy na potrzeby tego zadania taka konfiguracaja jest wystarczająca. Dalej wybieramy nasz dysk sda 2.0 GB do partycjonowania, dalej finish partitioning na tym ekranie pokazuje nam jak dysk zostanie podzielony i ile pojemnosci dysków zostało przydzielonych do poszczególnych partycji - / 1.0 GB, klikamy finish partitonig, potwierdzamy i rozpoczyna się instalacja systemu.
+
+->Dalej instalator prosi nas o wybranie kraju w celu znalazienia najepszego serwera mirroringu archiw. Wybieram Polska, a potem ftp.task.gda.pl są to rekomendowane archiwa dla naszej lokalizacji, dalej pyta nas o proxy jednak w moim przypadku nie jest potrzebne.
+
+->Na końcu instalator pyta o instalacje środowiska graficznego wybieram standard system utilites, po instalacji pyta o instalacje GRUBa - boot loader - wybieram opcję domyślą czyli w MBR
+
+Po instalacji Debian wita nas ekranem startowym.
+

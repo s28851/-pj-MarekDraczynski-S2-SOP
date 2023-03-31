@@ -1,0 +1,122 @@
+Instrukcja instalacji Debiana
+
+Aby zainstalować system Debian w maszynie wirtualnej przy użyciu programu Oracle VirtualBox, potrzebujemy:
+
+Obraz systemu Debian, który możemy pobrać z https://www.debian.org/distrib/.
+W przypadku instalacji na 64-bitowym PC wybieramy "ISO netinst dla 64-bitowego PC".
+Maszynę wirtualną, jak np. Oracle VirtualBox.
+Kroki instalacji:
+
+Uruchamiamy VirtualBox i klikamy "New".
+W polu "Name" wpisujemy nazwę maszyny.
+Jeśli wpisaliśmy "Debian", w polach "Type" oraz "Version" automatycznie ustawi się wersja systemu i typ.
+W przeciwnym przypadku wybieramy:
+"Type": Linux.
+"Version": "Debian 32-bit" dla komputerów 32-bitowych lub "Debian 64-bit" dla 64-bitowych.
+Klikamy "Next".
+Wybieramy ilość pamięci RAM zgodnie z wymaganiami systemowymi, 
+które znajdują się na https://www.debian.org/releases/jessie/mips/ch03s04.html.en. - 512MB
+Wybieramy "Create a virtual hard disk now".
+Wybieramy rodzaj dysku:
+VMDK - natywny format dysku dla narzędzi firmy VMware, analogiczne zastosowanie jak dla VirtualBox i HyperV.
+VHD - plik w formacie dysku fizycznego, używany głównie w HyperV.
+VDI - pliki dysku VirtualBox.
+Wybieramy "VDI", klikamy "Next", a następnie wybieramy "Dynamically allocated",
+aby plik nie zajmował od razu całej wybranej przez nas pojemności. Stały rozmiar jest bardziej wydajny,
+ponieważ nie musi ciągle alokować miejsca.
+Wybieramy miejsce, gdzie zapisze się nasz wirtualny dysk, oraz jego maksymalną pojemność i klikamy "Create".
+Po utworzeniu wybieramy naszą maszynę, przechodzimy do
+"Settings" -> "Storage" -> "Płyta z plusem" -> "Add" i wybieramy obraz.
+Włączamy naszą maszynę.
+"Zwykły start" nie ma opcji odłączenia interfejsu graficznego.
+"Bezgłowy start" uruchamia maszynę z odłączonym interfejsem graficznym (maszyna będzie działać w tle).
+"Oddzielny start" pozwala wybrać opcję odłączenia od interfejsu graficznego.
+Instalacja Debian:
+
+Instalacja systemu Debian:
+
+Na początku wybieramy tryb instalacji, ja wybrałem tryb tekstowy z uwagi na jego podobne możliwości do trybu graficznego.
+Następnie wybieramy język systemu. Zalecany jest język angielski, tak samo ustawiamy dla naszej klawiatury.
+Określamy nazwę maszyny w naszej sieci, hostname. Sugerowana nazwa to "debian", którą zostawiamy.
+Nie dołączam maszyny do domeny, ponieważ korzystam z sieci domowej.
+Dołączanie komputera do domeny jest jednym ze sposobów na zarządzanie komputerami w firmie lub organizacji,
+a administrator może kontrolować, jakie zasoby są dostępne dla użytkowników,
+jakie aplikacje są zainstalowane na komputerze oraz jakie ustawienia mają zastosowanie dla poszczególnych użytkowników.
+Hasło dla konta administratora, czyli root, powinno zawierać odpowiednie parametry, aby spełniać standardy bezpieczeństwa.
+Podajemy pełną nazwę konta użytkownika, które nie jest związane z zarządzaniem systemem.
+System podpowiada, aby to było nasze prawdziwe imię.
+Wpisujemy "username", nazwę powinno zaczynać się od małej litery.
+Nadajemy hasło dla konta użytkownika.
+Konfiguracja zegara systemowego jest oparta na wcześniejszym wyborze języka, więc jeśli chcemy,
+aby była wyświetlana godzina naszej lokalizacji, powinniśmy wybrać język odpowiadający naszej strefie czasowej.
+Konfiguracja partycji dyskowych:
+Guided - use entire disk. Konfigurator przygotuje mapowanie wybranego dysku i daje nam możliwość
+użycia wszystkiego na jednej partycji lub na wydzielonej partycji /home,
+gdzie konta użytkowników nie zostaną naruszone w przypadku formatowania systemu.
+Istnieje również opcja z podziałem na /home, /var, /tmp.
+Guided - use entire disk and set up LVM. LVM to skrót od Logical Volume Manager,
+który umożliwia nam utworzenie jednego wirtualnego dysku z wielu różnych dysków.
+Można dynamicznie rozszerzać rozmiar dysku w trakcie działania maszyny, co jest bardzo przydatne.
+Guided - use entire disk and set up encrypted LVM. Ta opcja działa tak samo jak poprzednia,
+ale dodatkowo wirtualny dysk jest szyfrowany.
+Manual. Ostatnia opcja umożliwia ręczne ustawienie partycji systemu, a tę opcję wybrałem.
+Guided partitioning. Powoduje to powrót do początku konfiguracji dysków.
+Konfiguracja woluminów iSCSI. iSCSI (Internet Small Computer System Interface)
+to protokół służący do przesyłania blokowych danych z jednego urządzenia do drugiego w sieci.
+Wirtualne dyski iSCSI są dostarczane do systemu operacyjnego przez protokół iSCSI
+i tworzone na urządzeniach serwerowych, po czym udostępniane są jako zasoby sieciowe dla klientów.
+Klient może połączyć się z wirtualnymi dyskami iSCSI i używać ich jakby były
+one lokalnymi dyskami twardymi. Korzystanie z iSCSI może przynieść wiele korzyści,
+takich jak centralne zarządzanie i wirtualizacja dysków twardych w sieci, co ułatwia zarządzanie
+i skalowanie infrastruktury. Dodatkowo iSCSI może być używany jako dysk dla wielu systemów operacyjnych,
+bez potrzeby fizycznego podłączania dysku do każdego z nich.
+
+Wybieram opcję "Utwórz dysk wirtualny".
+
+Pytanie o stworzenie nowej tabeli partycji jest związane z dwoma typami partycji: MBR i GPT.
+Maszyna jest uruchamiana z włączonym UEFI, jeśli jest wyłączone, to MBR musi zostać włączone.
+MBR to starszy typ, a zalecany jest dla nowszych systemów GPT.
+
+Wybieramy "Wolne miejsce" -> "Utwórz nową partycję" -> "Rozmiar partycji" -> "Typ partycji Primary/Logical".
+Partycje pierwotne są podstawowymi partycjami na dysku twardym (max. 4),
+podczas gdy partycje logiczne są tworzone w obrębie partycji rozszerzonej 
+i pozwalają na tworzenie dodatkowych partycji na dysku twardym, gdy liczba partycji pierwotnych jest już maksymalna.
+Następnie wybieramy, czy nowa partycja ma znajdować się na początku czy na końcu dostępnej przestrzeni.
+
+W dalszej części konfiguracji możemy zmienić następujące opcje:
+Formatowanie systemu plików,
+Punkt montowania partycji,
+Opcje montowania (wyświetlana jest lista dostępnych opcji),
+Nazwa,
+Zarezerwowane bloki. Zazwyczaj około 5% całkowitej przestrzeni dyskowej jest zarezerwowane na bloki rezerwowe.
+Bloki te są zarezerwowane na potrzeby administratora systemu lub roota i są używane w sytuacjach,
+gdy system plików jest w stanie krytycznym i wymaga naprawy,
+lub gdy partycja jest pełna, a użytkownik nie ma dostępu do systemu.
+Zarezerwowane bloki. Zwykle około 5% całkowitej przestrzeni dyskowej jest zarezerwowane na bloki zarezerwowane.
+Te bloki są przeznaczone dla administratora systemu lub użytkownika root i są używane w przypadku,
+gdy system plików jest w stanie krytycznym i wymaga naprawy,
+lub gdy partycja jest zapełniona i użytkownik nie ma dostępu do systemu.
+Typowe wykorzystanie. Możemy skonfigurować inode, co jest szczególnie ważne, gdy dysk jest duży.
+Flagi bootowania. Na partycji podstawowej może być tylko jedna flaga bootowania, która określa,
+z której partycji BIOS ma uruchamiać system.
+
+Potwierdzamy zmiany i przechodzimy do kolejnego etapu.
+Wybieramy z lustra (mirror) najbliższe naszej lokalizacji i kontynuujemy.
+System będzie chciał przeskanować i wysłać dane na temat najczęściej używanych pakietów.
+Wybór oprogramowania:
+Interfejs GNOME oferuje intuicyjne funkcje i narzędzia oraz przyjazną dla użytkownika obsługę, stabilne środowisko graficzne.
+Interfejs KDE jest bardziej konfigurowalny i dostosowywalny niż GNOME.
+Posiada także wiele narzędzi, w tym narzędzia do zarządzania plikami i oknami.
+Środowisko graficzne Xfce jest przeznaczone dla użytkowników, którzy preferują lekkie i szybkie środowiska.
+Xfce jest znacznie mniej wymagające niż GNOME i KDE, ale oferuje wiele przydatnych funkcji i narzędzi.
+Środowisko graficzne LXDE jest bardzo lekkie i przeznaczone dla użytkowników,
+którzy posiadają starsze lub słabsze komputery.
+LXDE jest bardzo proste w obsłudze i nie wymaga dużych zasobów systemowych, ale oferuje podstawowe funkcje i narzędzia.
+Cinnamon zapewnia łatwy i przyjazny interfejs dla użytkownika.
+Cinnamon jest bardziej wymagające niż niektóre inne środowiska graficzne, takie jak Xfce czy LXDE,
+ale oferuje również bardziej rozbudowane funkcje i efekty wizualne.
+Środowisko graficzne Plasma oferuje dużą możliwość personalizacji wyglądu interfejsu użytkownika,
+ale jest mniej wydajne niż niektóre z wymienionych tu środowisk.
+
+
+
