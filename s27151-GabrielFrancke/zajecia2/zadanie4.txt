@@ -1,0 +1,2 @@
+Jeśli użyjemy tylko $X, to wynik nie będzie wyświetlony poprawnie, ponieważ wartość zmiennej X zawiera znaki specjalne takie jak nowe linie i tabulatory, 
+które są interpretowane przez powłokę. Aby uniknąć tego problemu, należy użyć cudzysłowów podczas wyświetlania wartości zmiennej, czyli "$X".

@@ -1,0 +1,26 @@
+2.1 
+W programie najpierw zdefiniowano zmienną X i jej przypisano wartość "tekst". 
+Następnie przy pomocy polecenia 'echo' wartość tej zmiennej została wyświetlona. 
+Później program uruchomił drugą powłokę - która odpowiada za działanie podprogramu wewnątrz programu, 
+gdzie jednak zmienna X nie była już zdefiniowana. Czyli nie miała przypisanej wartości. 
+Podsumowując, gdy w drugiej powłoce użyto polecenia 'echo', 
+to słowo "tekst" zostało wyświetlone tylko raz, 
+ponieważ zmienna X nie była już zdefiniowana.
+
+2.2 
+W kodzie wartość zmiennej powinna być zaznaczona Apostrofami lub Cudzysłowami, 
+ponieważ dwa słowa są oddzienlone spacją.
+Poprawny kod wyglądał by tak:
+X="Tekst dłuższy"
+echo $X
+
+2.3
+Podwójne Cudzysłowy "" pozwalają na wykorzystanie zmiennych i znaków specjalnych wewnątrz stringa, 
+Apostrofy '' traktowane są jako ciąg znaków, gdzie nie można umieszczać zmiennych ani znaków specjalnych.
+
+2.4
+Poprawny kod wyglądał by tak:
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+
+
