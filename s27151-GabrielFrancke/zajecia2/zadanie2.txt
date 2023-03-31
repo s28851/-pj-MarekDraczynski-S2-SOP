@@ -1,7 +1,7 @@
 2.1 
 W programie najpierw zdefiniowano zmienną X i jej przypisano wartość "tekst". 
 Następnie przy pomocy polecenia 'echo' wartość tej zmiennej została wyświetlona. 
-Później program uruchomił drugą powłokę - która odpowiada za działanie podprogram wewnątrz programu, 
+Później program uruchomił drugą powłokę - która odpowiada za działanie podprogramu wewnątrz programu, 
 gdzie jednak zmienna X nie była już zdefiniowana. Czyli nie miała przypisanej wartości. 
 Podsumowując, gdy w drugiej powłoce użyto polecenia 'echo', 
 to słowo "tekst" zostało wyświetlone tylko raz, 
