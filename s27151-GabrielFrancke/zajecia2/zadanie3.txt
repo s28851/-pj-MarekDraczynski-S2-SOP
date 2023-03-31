@@ -1,1 +1,13 @@
+PATH to lista katalogów, które zawierają pliki wykonywalne, takie jak programy lub skrypty. Dzięki temu nie musimy podawać całej ścieżki do pliku, aby móc go uruchomić, ponieważ system automatycznie szuka pliku w każdym katalogu znajdującym się na liście PATH.
 
+RANDOM to wbudowana zmienna w Bashu, która generuje losową liczbę całkowitą z zakresu od 0 do 32767. Jest przydatna do generowania "losowych" wartości w skryptach, takich jak np. generowanie losowych haseł.
+
+PWD to ścieżka do bieżącego miejsca w systemie, w którym użytkownik znajduje się w danym momencie. Ta informacja może być przydatna, aby określić lub sprawdzić, w którym miejscu w systemie znajduje się użytkownik.
+
+PS1 to zmienna środowiskowa w Bashu, która umożliwia dostosowanie formatu wiersza poleceń (prompt) użytkownika. Może się przydać do zmiany wyglądu promptu i ułatwienia orientacji w terminalu poprzez wyświetlanie informacji, takich jak nazwa hosta, katalog bieżący czy nazwa użytkownika.
+
+USER to nazwa obecnego użytkownika, który wykonuje skrypt w Bashu. Może być wykorzystywana do nazewnictwa plików w zależności od użytkownika, który je stworzył za pomocą skryptu.
+
+HOSTNAME to nazwa komputera widoczna w sieci. Jest przydatna, ponieważ pozwala na dostosowywanie działania skryptu w zależności od tego, na jakim hoście jest uruchamiany.
+
+OSTYPE to zmienna, która określa typ systemu operacyjnego, na którym działa skrypt. Może się przydać, aby ograniczyć działanie skryptu tylko do wybranych systemów operacyjnych, w których chcemy, aby skrypt był uruchamiany.
