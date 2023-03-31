@@ -1,0 +1,16 @@
+1.Wpierw definiujemy zmienną X i przypisujemy jej wartość "tekst".
+Następnie poleceniem echo wyświetlamy zmienną X.
+W następnej Powłoce nic się nie stanie ponieważ nie jest już zdefiniowana zmienna X,Przez co nie można jej wyświetlić.
+
+2.Kod jest źle napisany ponieważ dwa stringi odziela znak spacji,
+przez co całe zdanie powinno być umieszczone między cudzysłowami lub apostrofami.
+TAK JAK TUTAJ:
+X="Tekst dłuższy"
+echo $X
+
+3.Znak apostrofu służy do przedstawienia ciągu znaków natomiast w cudzysłowie pozwala
+na przedstawienie ciągu znaków jak i zmiennych.
+
+4.Powinien wyglądać tak:
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
