@@ -1,0 +1,16 @@
+PATH - Jest to lista katalogów która przechowuje pliki wynkonywalne(np skrypty).
+Dzięki temu zaoszczędzamy czas na podawaniu całej szcieżki by go uruchomić ponieważ system przeszuka katalogi na liście PATH.
+
+RANDOM - Jest to wbudowana funkcja Basha która generuje liczbę pseudolosowe w zakresie 0 do 32767.
+
+PWD - Ukazuje ścieżke w którym miejscu w systemie znajduje się aktualnie użytkownik.
+
+PS1 - Jest to Zmienna środowiskowa odpowiadająca za możliwość zmianny wygląda Wiersza poleceń w zależności od upodobań użytkownika takie jak 
+zmianna kolorów czy wielkości liter.
+
+USER- Jest to nazwa użytkownika który wykonuje skrypty może się przydać np do nazewnictwa plików które by były tworzone przez jakiegoś użytkownika,
+dzięki czemu łatwiejsze do znalezienie w systemie.
+
+HOSTNAME-Ukazuje nazwe urządzenia w Sieci może się przydać do skonfigurowania skryptu w zależności na jakim hoście jest uruchomiony.
+
+OSTYPE- Określa typ systemu operacyjnego może się przydać do ograniczenia funkcjonalności kodu do wybranych przez użytkownika systemów.
