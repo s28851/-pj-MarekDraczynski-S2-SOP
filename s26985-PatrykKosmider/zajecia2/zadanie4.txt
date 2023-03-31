@@ -1,0 +1,9 @@
+#!/bin/bash
+X=`ls -l`
+echo "$X"
+
+
+----------------
+
+Samo wyświetlenie $X powoduję, że wszystko jest interpretowane jako osobny argument, wynik polecenia ls -l, jest wyświetlany słowo po słowie, oddzielone spacją.
+Dodanie cudzysłowów, "$X", powoduję, że podana zmienna jest interpretowana jako pojedynczy argument, dlatego wynik polecenie ls -l, jest wyswietlany dokladnie tak jak powinien, wraz zachowaniem znaków końca lini itp.

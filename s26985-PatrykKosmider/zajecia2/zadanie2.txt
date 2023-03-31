@@ -1,0 +1,30 @@
+1) X=tekst 
+ echo $X
+ bash 
+ echo $X
+
+Zmiennej X zostaje przypisana wartość "tekst", i za pomoca polecenie echo zostaje wyświetlona. Następnie 'bash' uruchamia drugą powłokę, jednak w niej zmienna X nie jest już zdefiniowana, dlatego 'tekst' wyświetla się tylko raz.
+
+2) X=Tekst dłuższy
+   echo $X
+
+Brakuje cudzysłowów lub apostrofów,
+
+X="Tekst dłuższy"
+echo $X
+
+3)X="Tekst 1"
+  Y="tekst:$X"
+  echo "$Y"
+  Y='tekst:$X'
+  echo "$Y"
+  Y=tekst:$X 
+  echo "$Y"
+
+Przy użyciu "", wywołane zostaną wartości zmiennych oraz znaki specjalne.
+Przy użyciu '' , wartość znajdująca się miedzy apostrofami jest traktowana jako ciąg znaków, więc zmienne wewnątrz nie będa zastąpione ich wartościami.
+
+
+4) A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+

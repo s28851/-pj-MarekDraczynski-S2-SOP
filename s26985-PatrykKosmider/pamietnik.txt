@@ -2,3 +2,11 @@
 
 Na dzisiejszych zajęciach oprócz przedstawienia zasad zaliczenia, miała miejsce szczegołówa instrukcja przygotowania środowiska wirutalnego (w oparciu o VirutalBox) oraz instalacja systemu Debian w nim.
 Nie nauczyłem się czegoś nowego, bardziej mogę to potraktować jako odświeżenie wiadomości, gdyż z narzędzia VirtualBox, korzystałem większość czasu spędzonego w technikum informatycznego, również instalowałem tam dystrybucje linux'a OpenSuse/Ubuntu. Podobnie w pracy, gdzie głównym OS'em na którym konfiguruję platformy, jest Ubuntu, a jego reinstall to czasem podstawowe narzędzie naprawy. Wszystko w tym temacie jest dla mnie jasne.
+
+18.03.2023
+
+Na dzisiejszych zajęciach pojawił się temat podstaw skryptowania w BASHU. Dowiedziałem się tego, jakie są operację na ciągach na znaków, oraz odświeżyłem pamięc i wiadomości na temat regexa oraz składni polecenia sed. 
+Operację na stringach były dla mnie nowe(wyciąganie substringów i manipulacja nimi), wcześniej tworząć jakieś skrypty np. do pracy, w sumie nie musiałem zbytnio z nich korzystać. 
+Znajomość tego jest bardzo przydatna, tak samo sed'a, by być w stanie odpowiednio obsłużyć dane, manipulować nimi oraz wyciągać z nich dokładnie potrzebne informacje. 
+Temat jest przedstawiony w sposób zrozumiały i jasny.
+

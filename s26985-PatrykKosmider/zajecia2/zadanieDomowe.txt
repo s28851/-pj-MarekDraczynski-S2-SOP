@@ -1,0 +1,8 @@
+#!/bin/bash
+if [  $# -gt 1 ]
+then
+echo Zla ilosc argumentow
+else
+plik=$(cat $1)
+echo -e "${plik//Patryk/\\033[31mPatryk\\033[0m}"
+fi

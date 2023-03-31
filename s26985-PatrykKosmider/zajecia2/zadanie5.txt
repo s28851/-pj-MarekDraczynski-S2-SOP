@@ -1,0 +1,37 @@
+5a)
+
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę
+
+------------------------------------------
+
+#!/bin/bash
+if [ $# -gt 1 ]
+then
+echo Za duza ilosc argumentów
+else
+imie=$1
+len=${#imie}
+len=$(($len - 1))
+if [ "${imie:$len}" == "a" ]
+then
+imie2="${imie::$len}ę"
+echo ${imie} ma kota, a kot ma ${imie2}
+else
+imie2="${imie}a"
+echo ${imie} ma kota, kot ma ${imie2}
+fi
+fi
+
+
+5b)
+
+#!/bin/bash
+tekst=$1
+len=${#tekst}
+poczatek="${tekst:0:1}"
+koniec="${tekst: -1}"
+echo Pierwszy znak: ${poczatek}
+echo Ostatni znak: ${koniec}
+echo -e "${tekst//SOP/\\e[32mSOP\\e[0m}"
+

@@ -15,7 +15,6 @@ Przygotwanie środowiska wirtualnego, w VirtualBox.
 
 Instalacja systemu operacyjnego Debian.
 
-	W trakcie instalacji systemu pojawił mi się Kernel panic - korzystając z internetu, jako fix ustawiłem 2 CPU w VB!
 
 	1. Wybieram opcję Install, bez interfejsu graficznego. W opcjach advanced możemy znaleźć instalację w trybie graficznym ekspert( dla zaawansowanych użytkoników), rescue mode, czyli zestawu narzędzi do próby odratowania naszego systemu, w przypadku awarii, automated install - instalacje automatyczną. Znajdziemy również odpowiedniki wyżej wymienionych narzędzi, tylko że nie w trybie graficznym.
 	2. Opcję językowe - Angielski.
@@ -25,9 +24,10 @@ Instalacja systemu operacyjnego Debian.
 	6. Hostname, czyli jak widoczny będzie maszyna w sieci ustawiam na test-debian, jakąs nazwę w końcu trzeba dać.
 	7. Domeny nie ustawiam, bo nie korzystam i nie mam takowej nigdzie skonfigurowanej.
 	8. Ustawiam hasło dla roota, oraz tworze swoje wlasne konto.
-	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał część plików.Partycji swap nie tworzę, gdyż mam wystarczająca zapas 	pamięci RAM, a maszyna nie będzie służyć do zaawansowanych i obciążających celów. W Guided partitioning możemy wybrać, by automatycznie	
-	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), oraz to
-	samo co wcześniej tylko z zaszyfrowanym LVM. Obie partycję są tworzone jako primary, gdyż nie mam więcej niz 4.
+	9. Partycję dysku ustawiam ręcznie, na system przeznaczam rekomendowane 2GB, natomiast drugie 2GB przeznaczam na kolejną partycję, na której będe przechowywał 		część plików.
+	Partycji swap nie tworzę, gdyż mam wystarczająca zapas pamięci RAM, a maszyna nie będzie służyć do zaawansowanych i obciążających celów. W Guided partitioning 		możemy wybrać, by automatycznie	utworzyło partycję na cały dysk, utworzyło partycję na cały dysk wraz z LVM (Logical Volume Manager, system który pozwala na 		zarządzanie przestrzenią pamięci, pozwala na łączenie różnych partycji w jeden wirtualny dysk), 
+	oraz to samo co wcześniej tylko z zaszyfrowanym LVM. Obie partycję są tworzone jako primary, gdyż nie mam więcej niz 4.
+
 	10. System plików wybieram Ext4 - najnowsza wersja ext, ma większe limity pojemności niż poprzednie, jest wstecznie kompatybilny ze starszymi wersjami, ma lepszą wydajność oraz wieksza ilość obsługiwanych podfolderów. Posiada 	również księgowanie, czyli dane zapisywane są w "dzienniku", zanim zostaną zapisane na dysk, więc zmniejsza się ryzyky utraty danych. Przykładowo jeśli nasz komputer wyłączy się w trakcie procesu zapisywania, zostanie on 	dokończony po jego ponownym uruchomieniu, lub stracimy tylko zmiany wprowadzone, ale plik oryginalny wciąż będzie dostępny.  
 		Pozostałe opcje:
 		-  Ext3 - poprzednik ext4, mniejsza wydajność i limity, również posiada mechanizm księgowania
@@ -62,10 +62,4 @@ Instalacja systemu operacyjnego Debian.
 		- MATE - mniejsze wymagania sprzętowe od GNOME
 	15. Instaluję boot loadera GRUB - wymagany program, by móc uruchomić system, lub wiele systemów, gdy mamy zainstalowany więcej niż jeden na jednym dysku. Jako miejsce instalacji wybieram jedyny dysk /dev/sda
 	16. Instalacja została zakończona pomyślnie.
-	
-	
 
-
-
-
-	
