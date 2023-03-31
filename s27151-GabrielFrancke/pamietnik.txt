@@ -2,3 +2,6 @@
 Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 - Jak zainstalować system operacyjny Debian jako maszynę wirtualna, jak odpowiednio dysponować zasaboami przeznaczonymi na własną maszyne wirtualna i jak wygląda przebieg całej instalacji tego systemu operacyjnego. 
 - Nie miałem z tym większych problemów ponieważ kożystałem już wcześniej z VB i ze środowiska linuxowego ubuntu.
+
+2023-03-18
+Dzisiaj na zajęciach poruszaliśmy temat podstaw skryptowania w BASHU. Poznałem nowe dla mnie operacje na stringach jak i rozinołem moją wiedzę apropo operacji na ciągach znaków. Niestety podczas zajęć mogłem tylko zaznajomić się z zadaniami, bo niestety niestarczyło nam czasu na zajęciach by całkowicie pobrać system operacyjny jako maszynę wirtualną. Więc niemaiałem środowiska w którym mógł bym rozwiązywać zadania. Niemniej jednak postaram się je wykonywać w kompilatorze online i później na moim kopurze domowym
