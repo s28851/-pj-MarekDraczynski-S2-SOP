@@ -1,0 +1,50 @@
+A.
+
+#!/bin/bash
+
+# Sprawdzenie, czy skrypt został wywołany z argumentem
+if [ $# -eq 0 ]; then
+    echo "Podaj imię jako argument skryptu"
+    exit 1
+fi
+
+# Pobranie imienia z argumentu skryptu
+IMIE=$1
+
+# Ustawienie końcówki imienia w zależności od jego płci
+if [[ "$IMIE" =~ ^[A-ZĄĘŚŻŹÓ][a-ząęśćżźó]*$ ]]; then
+    KONCOWKA="ę"
+else
+    KONCOWKA="a"
+fi
+
+# Wyświetlenie tekstu z użyciem zmiennej KONCOWKA
+echo "$IMIE ma kota, a kot ma ${IMIE}${KONCOWKA}"
+Skrypt sprawdza, czy został wywołany z argumentem, a następnie pobiera imię z argumentu
+i ustawia końcówkę w zależności od płci imienia. Następnie skrypt wyświetla tekst, używając zmiennej KONCOWKA,
+aby poprawnie odmienić imię. Skrypt działa dla imion żeńskich i męskich,
+o ile imiona te nie są specjalnymi przypadkami z nietypowym odmienianiem.
+
+B.
+
+#!/bin/bash
+
+# Sprawdzenie, czy skrypt został wywołany z argumentem
+if [ $# -eq 0 ]; then
+    echo "Podaj tekst jako argument skryptu"
+    exit 1
+fi
+
+# Pobranie argumentu do zmiennej
+TEKST=$1
+
+# Wypisanie pierwszego i ostatniego znaku
+echo "Pierwszy znak: ${TEKST:0:1}"
+echo "Ostatni znak: ${TEKST: -1}"
+
+# Zamiana tekstu SOP na odpowiedni kod koloru
+echo "${TEKST//SOP/\e[32mSOP\e[0m}"
+Skrypt najpierw sprawdza, czy został wywołany z argumentem, a następnie pobiera ten argument do zmiennej TEKST.
+Następnie skrypt wypisuje pierwszy i ostatni znak z argumentu, korzystając z podstawienia napisów.
+Na końcu skrypt zamienia każde wystąpienie tekstu SOP na kod koloru,
+korzystając z podstawienia napisów i wykorzystując odpowiednią sekwencję kodu ANSI dla koloru zielonego.

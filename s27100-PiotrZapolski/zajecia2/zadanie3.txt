@@ -1,0 +1,25 @@
+PATH - zawiera ścieżki do katalogów, w których system operacyjny będzie szukał plików wykonywalnych programów.
+Ta zmienna jest używana przez system operacyjny, aby automatycznie znaleźć i
+uruchomić programy znajdujące się w określonych katalogach,
+bez konieczności podawania pełnej ścieżki do pliku. Może to być przydatne podczas instalacji nowych programów
+lub modyfikacji ścieżki systemowej,
+aby dodać nowe katalogi.
+
+RANDOM - zawiera losową liczbę całkowitą w zakresie od 0 do 32767. Ta zmienna może być przydatna
+w skryptach do generowania losowych liczb lub ciągów znaków.
+
+PWD - zawiera bieżącą ścieżkę katalogu roboczego, czyli katalogu, w którym znajduje się użytkownik w danym momencie.
+Może to być przydatne podczas nawigacji po systemie plików, gdy chcemy pobrać lub zmienić bieżącą lokalizację.
+
+PS1 - zawiera ciąg znaków, który jest wyświetlany jako wiersz poleceń lub znak zachęty.
+Może to być przydatne podczas dostosowywania wyglądu terminala lub dodawania własnych aliasów.
+
+USER - zawiera nazwę użytkownika, który jest zalogowany na bieżącej sesji.
+Może to być przydatne w skryptach lub innych programach, które wymagają autoryzacji użytkownika.
+
+HOSTNAME - zawiera nazwę hosta, na którym działa system operacyjny.
+Ta zmienna może być przydatna do identyfikacji zdalnych serwerów lub innych maszyn.
+
+OSTYPE - zawiera nazwę systemu operacyjnego, na którym działa shell.
+Ta zmienna może być przydatna, gdy chcemy napisać skrypty, które działają na różnych systemach operacyjnych
+i wymagają różnych działań zależnie od platformy.
