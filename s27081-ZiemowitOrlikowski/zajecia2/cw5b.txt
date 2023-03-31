@@ -1,0 +1,8 @@
+#!/bin/bash
+
+TEKST=$1
+
+echo "Pierwszy znak argumentu ${TEKST:0:1}"
+echo "Ostatni znak argumentu ${TEKST:${#TEKST}-1:1}"
+
+echo -e "${TEKST//SOP/\\e[32mSOP\\e[0m}"

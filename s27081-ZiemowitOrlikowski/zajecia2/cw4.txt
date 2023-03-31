@@ -1,0 +1,8 @@
+#!/bin/bash
+
+x=$(ls -l)
+echo -e "$x"
+
+#Dzięki fladze -e w echo pozwalamy na odczytywanie znaków ucieczki do nowej linii, a dając cudzysłowy mamy ciąg znaków z znakami ucieczki
+
+#Daje nam to taki sam rezultat jak ls -l
