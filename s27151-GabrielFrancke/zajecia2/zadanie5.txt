@@ -7,7 +7,7 @@ if [ $# -gt 1 ]; then
 else
   imie=$1
   if [ -z "$imie" ]; then
-    echo "Nie podano imienia kota."
+    echo "Nie podano imienia właścicielki kota."
   else
     len=${#imie}
     len=$((len-1))
