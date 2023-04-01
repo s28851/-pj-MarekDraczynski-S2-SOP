@@ -1,0 +1,8 @@
+#!/bin/bash
+
+X=tekst
+echo $X
+bash
+echo $X
+
+#Komenda bash otwiera nowego shella, w którym $X nie jest zdefiniowany

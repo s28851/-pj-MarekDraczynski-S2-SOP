@@ -10,3 +10,16 @@ Uwazam ze manualne konfigurowanie partycji sprawia mi jeszcze klopoty.
 Zaskakujace bylo ile mozliwosci konfiguracji ma wirtuala maszyna.
 
 Uwazam ze zajecia sa prowadzone przez bardzo kompetentna osobe, zadania wydaja sie czasochlonne i wymagajace, mam nadzieje ze dzieki temu moja wiedza dot. systemow operacyjnych bedzie wieksza. 
+
+2023-03-17
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-informacji nt. powłok linuxa
+-wykorzystania narzędzia sed
+
+Na zajęciach prowadzący przedstawił nam basha, wytłumaczył jak działa sed i pokazał strony przydatne do nauki. Na koniec dał nam zadania do zrobienia.
+
+Uważam że wyrażenia regex sprawiają mi jeszcze kłopoty
+
+Zaskakujące było ile modyfikacji tekstu można zrobić w jednej linijce kodu
+
+Uważam że już zaczynam rozumieć tok nauczania prowadzącego i wykonywanie zadań staje się mniej skomplikowanie. Jeśli chodzi o zadania to niestety w moim odczuciu pojawiło się jedno ze słabo sprecyzowanymi wytycznymi(ćwiczenie 6) przez co go nie wykonałem i na następnych zajęciach będę się dopytywać

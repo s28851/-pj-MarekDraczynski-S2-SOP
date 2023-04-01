@@ -1,0 +1,12 @@
+#!/bin/bash
+
+X="Tekst 1"
+Y="tekst:$X"
+echo "$Y"
+Y='tekst:$X'
+echo "$Y"
+Y=tekst:$X
+echo "$Y"
+
+#Cudzysłowa odczytują znaki jak np. $zmienna lub znak ucieczki są interpetowane
+#Apostrofy odczytują ciąg znaków takim jaki jest - nie interpertują znaków i zmiennych

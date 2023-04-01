@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TEKST=$1
+
+if [[ $TEKST == *"a" ]];
+then
+	echo "${TEKST} ma kota, kot ma ${TEKST:0:${#TEKST}-1}ę"
+else
+	echo "${TEKST} ma kota, kot ma ${TEKST:0:${#TEKST}}a"
+fi
+
+
+#Tak napisanie takiego skryptu jest możliwe w czystym bashu

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+x="Tekst dłuższy"
+
+echo $x
+
+#Zastosowanie cudzysłowów i apostrofów rozwiąże nasz problem, bash po spacji bez cudzysłowów lub apostrofów rozpoznaje dalszą część lini jako kolejne operacje

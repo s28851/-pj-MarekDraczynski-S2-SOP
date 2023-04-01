@@ -1,0 +1,7 @@
+PATH-zmienna, w której przetrzymywana jest ścieżka wyszukiwania dla komend
+RANDOM-wewnetrza komenda bash'a pozwalająca na generowanie liczb losowych
+PWD-wewnętrzna zmienna pozwalająca pokzać naszą lokalizację - w jakim katalogu się znajdujemy
+PS1-zmienna środowiskowa pozwalająca na zmianę znaku zachęty
+USER-zmienna środowiskowa wskazująca zalogowanych użytkowników
+HOSTNAME-zmienna środowiskowa pokazująca na nazwę naszego urządzenia
+OSTYPE-zmienna środowiskowa pozkazująca typ linuxa na jakim pracujemy - np. linux-gnu

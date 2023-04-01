@@ -97,8 +97,25 @@ Uruchamiamy naszą maszynę wirtualną, pokazuje się instalator debiana
 4.3.5 Conifgure iSCSI volumes - tak jak w 4.2
 4.3.6 Wyświetlenie naszego dysku - jak jest podzielony
 4.3.7 Dostępna część pamięci do konfiguracji
-4.3.7.1 Create a new partiton - tworzenie nowej partycji (Primary(maks trzy - czwarta to logiczna, logical - nieograniczona ilość partycji)
+4.3.7.1 Create a new partiton - tworzenie nowej partycji (Primary - maks cztery lub trzy - czwarta extended, logical - maksymalnie 65536)
 4.3.7.1.1 Wybieramy wielkość partycji -> Wybieramy czy ma być Primary czy Logical -> czy ma być dodana na początku czy na końcu -> ustalamy system plików (w nowszych dystrybucjach linuxa domyślna to ext4), mouting point, mounting options - pozwala na dodanie opcji - np. partycja będzie tylko do odczytu, etykieta, reserved blocks - miejsce pozwalające na remapowanie dysków w celu naprawy lub na utrzymanie małej przestrzeni aby system funkcjonował płynnie, typical usage - pozwala na ustalenie jak będzię użytowany nasz dysk w celu optymalizacji przetrzymwania metadanych, flaga bootująca - system gdy się bootuje szuka parycji z flagą bootującą co pozwoli uruchomić system.
+
+Rodzaje dostępnych systemów plików:
+->ext4 - obsługuje pliki w rozmiarze powyżej 16TB, uważany jest za jeden z najszybszych dostępnych systemów plików(szybsze alkowanie bloków, wydajniejsze zarządzanie plikami). Ext4 posiada m. in. journaling czyli zapisywane danych na bieżąco co może być przydatne w przypadku awarii systemu, oferuje także większą odporność na błędy systemowe i uszkodzenia sektorów. Jeśli chodzi o bezpieczeństo posiada funkcję szyfrowania.
+
+->ext3 - starszy system plików, nieco wolniejszy od ext4, posiada także journaling oraz większą odporność na błędy systemowe i uszkodzenia sektorów w porównaniu z ext2. Mechanizmy zabezpieczające umożliwają na szczegółowe kontrolowanie dostępu do plików i katalogów.
+
+->ext2 - starszy system plików, jest stosunkowo prosty - nie oferuje zaawansowanch mechanizmów optymalizujących przez co jest mniej wydajny niż jego następcy. Nie oferuje journalingu co grozi utratą danych w trakcie awarii, posiada jedynie podstawową odporność na błędy dyskowe, przez kontrolowanie checksumów plików(sumy kontrolne). W kwestii bezpieczeństwa nie oferuje zaawansowanych funkcji szyfrujących, a kontrola plików jest ograniczona do standarodwych uprawnień użytkowników i grup
+
+->btrfs - nowoczesny system plików zapewniający wydajność i bezpieczeństwo. Wykorzystuje mechanizmy optymalizacji wydajności m.in. dynamiczna alokacja bloków. Btrfs wprowadza mechanizmy takie jak journaling, checksumming i kopiowanie na poziomie pliku, w przypadku awarii systemu, dane są zabezpieczone i można je łatwo przywrócić. Btrfs umożliwia również tworzenie kopii zapasowych danych w czasie rzeczywistym co pozwala na łatwe przywracanie danych. Mechanizmy zabezpieczające to ochrona przed wykonywaniem plików, zaawansowane zarządzanie użytkownikami i grupami, a także szyfrowanie danych.
+
+->JFS - system stworzony z myślą o wydajności oraz odporności na awarie. Posiada bardzo krótkie czasy dostępów do plików oraz niskopoziomowe mechanizmy optymalizacyjne takie jak np. kontrole ciągłości danych. Obsługuje journaling, kontrolę spójności danych i przeciążenia. Nie oferuje zaawansowanych mechanizmów zabezpieczających, głównie skupia się na szybkim dostępie do danych.
+
+->XFS - założenia systemu to wydajność i skalowalność. Oferuje bardzo wysoką wydajność na dużych i małych plikach. Posiada journaling, kontrolę spójności plików oraz mechanizmy naprawy. Bezpieczeństwo jest utrzymywane dzięki ochronie przed wykonywaniem plików, szyfrowaniem i autoryzacją na poziomie pliku.
+
+->FAT16 - jeden z najstarzych systemów utrzymujący się do dziś. Przez swoje "ograniczenia wiekowe" oferuje słabszą wydajność oraz ograniczenia co do rozmiaru partycji lub pliku. Nie posiada mechanizmów ochrony danych w przypadku awarii systemu lub uszkodzenia danych. Posiada ustawinie hasła na poziomie całej partycji.
+ 
+->FAT32 - ulepszona wersja FAT32. Szybszy od FAT16, obsługuje większe pliki i partycje w porównaniu do swojego poprzednika. System nie obsługuje journalingu, mechanizmów naprawy. Zabezpieczenia podobne do FAT16.
 
 4.3.7.2 Automatically partiton the free space - automatyczne partycjonowanie wolnej przestrzeni na dysku
 4.3.7.3 Show Cylider/Head Sector Information - pokazuje informacje jak na dysku rozmieszczone jest wolne miejsce np. zaczyna sie na (0,1,0) a kończy na (32896,127,1).
@@ -115,5 +132,15 @@ Uruchamiamy naszą maszynę wirtualną, pokazuje się instalator debiana
 
 ->Na końcu instalator pyta o instalacje środowiska graficznego wybieram standard system utilites, po instalacji pyta o instalacje GRUBa - boot loader - wybieram opcję domyślą czyli w MBR
 
-Po instalacji Debian wita nas ekranem startowym.
+Rodzaje dostępnych środowisk graficznych:
+->GNOME - popularne środowisko graficzne dostępne na wielu dystrybucjach Linuxa. Charakteryzuje się minimalistycznym i łatwym w użyciu interfejsem użytkownika.
+->KDE - oferuje interfejs graficzny zbliżony do systemów Windows. Jest często wybierane przez użytkowników, którzy potrzebują zaawansowanego interfejsu graficznego z dużą liczbą opcji i funkcji.
+->Xfce - lekkie i szybkie środowisko graficzne, które jest bardziej oszczędne niż GNOME i KDE.
+->LXDE - bardzo szybkie i lekkie środowisko, wykorzystanie go sprawdziłoby się dla starszych urządzeń z ograniczonymi zasobami.
+->Cinnamon - oparte na GNOME środowisko graficzne z bardziej tradycyjnym wyglądem i szeregiem dodatkowych funkcjonalności. Wymagania na dzisiajsze standardy nie są wygórowane.
+->MATE - kontynuacja GNOME 2 dla użytkowników niezadowolnych ze zmian w interfejsie graficznym. Każdy komputer z więcej niż 2GB ramu i zegarem ponad 2GHz może cieszyć się płynnym środowiskiem.
+->LXQt - minimalistyczna kontynuacja LXDE z bardzej spójnym interfejsem graficznym.
+->GNOME Flashback - klasyczny interfejs użytkownika oparty na GNOME 2.
+->KDE Plasma - rozbudowane i zaawansowane technicznie środowisko graficzne, które oferuje wiele funkcji i dodatków jest często wybierane przez użytkowników, którzy potrzebują zaawansowanego interfejsu graficznego z dużą liczbą opcji i funkcji. Jest nieco bardziej zasobożerne niż opisane powyżej środowiska.
 
+Po instalacji Debian wita nas ekranem startowym.

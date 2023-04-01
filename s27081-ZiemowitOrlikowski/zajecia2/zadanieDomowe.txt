@@ -1,0 +1,8 @@
+#!/bin/bash
+
+PLIK=$1
+IMIE=Ziemowit
+
+cat "$PLIK" | sed "s/$IMIE/$(echo -e '\e[31m'$IMIE'\e[0m')/g"
+
+#Cat odcztuje zawartość pliku $PLIK, | przekierowuje strumień do seda. Sed po /s$IMIE ustawia nam wzorzec do zmiany, echo -e umożliwa odczyt znaków ucieczki, '\e[31m'$IMIE' ustawia kolor naszego wyrażenia na czerwony, \e[0m przywraca domyślny kolor tekstu, flaga /g na końcu polecenia sed umożliwia dokonania zamiany na każdym występowaniu zmiennej $IMIE
