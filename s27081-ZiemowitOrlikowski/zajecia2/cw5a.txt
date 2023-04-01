@@ -2,7 +2,7 @@
 
 TEKST=$1
 
-if [[ $TEKST == *"a" }};
+if [[ $TEKST == *"a" ]];
 then
 	echo "${TEKST} ma kota, kot ma ${TEKST:0:${#TEKST}-1}ę"
 else
