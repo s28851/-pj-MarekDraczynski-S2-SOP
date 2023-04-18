@@ -1,0 +1,17 @@
+#!/bin/bash
+
+COLORS=(czarny='\e[0;30m' czerwony='\e[0;31m' zielony='\e[0;32m' zolty='\e[0;33m' niebieski='\e[0;34m' fioletowy='\e[0;35m' cyjan='\e[0;36m' bialy='\e[0;37m')
+
+
+function color {
+	for i in ${COLORS[@]}; do
+		if [[ $2 == $(echo $i | sed 's/=.*//') ]]; then
+			echo -e "$(echo $i | sed 's/.*=//')${1}\e[0m"
+		fi
+	done 
+}
+
+
+color test czerwony
+
+#Skrypt iteruje przez tablice z kolorami, odpowiednio przygotowany stirng jest porównywany z argumentem jeśli są równe wypisuje nam go na ekranie w kolorze - druga część stringa jest drukowana, \e[0m jest aby zachować domyślny kolor terminala po wydrukowaniu tekstu

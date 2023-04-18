@@ -103,7 +103,7 @@ Uruchamiamy naszą maszynę wirtualną, pokazuje się instalator debiana
 Rodzaje dostępnych systemów plików:
 ->ext4 - obsługuje pliki w rozmiarze powyżej 16TB, uważany jest za jeden z najszybszych dostępnych systemów plików(szybsze alkowanie bloków, wydajniejsze zarządzanie plikami). Ext4 posiada m. in. journaling czyli zapisywane danych na bieżąco co może być przydatne w przypadku awarii systemu, oferuje także większą odporność na błędy systemowe i uszkodzenia sektorów. Jeśli chodzi o bezpieczeństo posiada funkcję szyfrowania.
 
-->ext3 - starszy system plików, nieco wolniejszy od ext4, posiada także journaling oraz większą odporność na błędy systemowe i uszkodzenia sektorów w porównaniu z ext2. Mechanizmy zabezpieczające umożliwają na szczegółowe kontrolowanie dostępu do plików i katalogów.
+->ext3 - starszy system plików, nieco wolniejszy od ext2, posiada także journaling - przez który jest wolniejszy od porzednika - oraz większą odporność na błędy systemowe i uszkodzenia sektorów w porównaniu z ext2. Mechanizmy zabezpieczające umożliwają na szczegółowe kontrolowanie dostępu do plików i katalogów.
 
 ->ext2 - starszy system plików, jest stosunkowo prosty - nie oferuje zaawansowanch mechanizmów optymalizujących przez co jest mniej wydajny niż jego następcy. Nie oferuje journalingu co grozi utratą danych w trakcie awarii, posiada jedynie podstawową odporność na błędy dyskowe, przez kontrolowanie checksumów plików(sumy kontrolne). W kwestii bezpieczeństwa nie oferuje zaawansowanych funkcji szyfrujących, a kontrola plików jest ograniczona do standarodwych uprawnień użytkowników i grup
 

@@ -11,7 +11,7 @@ Zaskakujace bylo ile mozliwosci konfiguracji ma wirtuala maszyna.
 
 Uwazam ze zajecia sa prowadzone przez bardzo kompetentna osobe, zadania wydaja sie czasochlonne i wymagajace, mam nadzieje ze dzieki temu moja wiedza dot. systemow operacyjnych bedzie wieksza. 
 
-2023-03-17
+2023-03-31
 Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 -informacji nt. powłok linuxa
 -wykorzystania narzędzia sed
@@ -23,3 +23,14 @@ Uważam że wyrażenia regex sprawiają mi jeszcze kłopoty
 Zaskakujące było ile modyfikacji tekstu można zrobić w jednej linijce kodu
 
 Uważam że już zaczynam rozumieć tok nauczania prowadzącego i wykonywanie zadań staje się mniej skomplikowanie. Jeśli chodzi o zadania to niestety w moim odczuciu pojawiło się jedno ze słabo sprecyzowanymi wytycznymi(ćwiczenie 6) przez co go nie wykonałem i na następnych zajęciach będę się dopytywać
+
+2023-04-18
+Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-wykorzystania pętli for
+-importowania skryptów
+
+Na zajęciach prowadzący przedstawił jak działają pętle oraz ify w bashu, później wykonywaliśmy zadania.
+
+Uważam że wyrażenia regularne sprawiają mi jeszcze kłopoty
+
+Zaskakujące było jak szybko grupa poszła do domu ;)
