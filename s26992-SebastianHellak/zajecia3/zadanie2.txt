@@ -1,0 +1,52 @@
+ćwi2.1
+
+#/bin/bash
+for i in {10..1..2}; do
+	echo $i
+done
+
+
+ćwi2.2
+
+#!/bin/bash
+
+for i in "$@"; do 
+  echo $i
+done
+
+
+ćwi2.3
+
+#!/bin/bash
+
+for i in $(ls -a); do 
+	echo "Patrzcie Państwo, oto plik: $i"
+done 
+
+
+ćwi2.4
+
+#!/bin/bash
+
+for i in *; do
+	if [[ $i =~ .c$ ]]; then
+		plik=${i%.*}
+		cc $i -o $plik
+	fi
+done
+
+
+ćwi2.5
+
+#!/bin/bash
+
+
+for i in $(ls -p | grep -v /); do
+	echo -e "\n $i \n"
+
+	cat $i
+
+	echo -e "\n"
+
+	tac $i
+done
