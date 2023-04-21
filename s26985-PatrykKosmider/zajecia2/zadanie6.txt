@@ -1,14 +1,15 @@
 #!/bin/bash
 if [ $# -gt 1 ]
 then
-echo Za duza ilosc argumentowe
+	echo Za duza ilosc argumentowe
 else
-if [[ $1 =~ a$ ]]
-then
-imie=$(echo $1 | sed 's/a$/ę/')
-echo $1 ma kota, a kot ma ${imie}
-else
-imie=$(echo $1 | sed 's/$/a/')
-echo $1 ma kota, a kot ma ${imie}
+	if [[ $1 =~ a$ ]]
+	then
+		imie=$(echo $1 | sed 's/a$/ę/')
+		echo $1 ma kota, a kot ma ${imie}
+	else
+		imie=$(echo $1 | sed 's/$/a/')
+		echo $1 ma kota, a kot ma ${imie}
 fi
 fi
+
