@@ -1,0 +1,9 @@
+#/bin/bash
+
+f_pliku=$0
+
+if [[ ${f_pliku: -3} == ".sh" ]];then
+	echo "Format pliku to .sh"
+else
+	mv $f_pliku $f_pliku.sh
+fi

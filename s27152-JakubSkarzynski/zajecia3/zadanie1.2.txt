@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PLIK="$(pwd)/config.cfg"
+
+if [ -f "$PLIK" ]; then
+	echo "Plik istnieje"
+	bash ./config.cfg
+else 
+	if[[ $# != 0 ]]; then
+		bash ./$1
+	else
+		echo "Error - nie znaleziono pliku"
+	fi
+fi
