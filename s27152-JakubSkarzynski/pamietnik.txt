@@ -3,3 +3,15 @@ Moj kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 - Istalacji Systemu Operacyjnego Debian
 - Jak mądrze zarządzać zasobami (Przydzielanie odpowiedniej wartości RAM'u oraz Dysku)
 - Jakie konsekwencje niesie za sobą przydzielenie za dużej wartości jednej z wyżej wymienionych opcji
+
+2023-03-18
+Moj Kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+Bardziej przypomniałem sobię jak pisać skrypty w BASH'u
+
+2023-04-02
+Moj Kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+Niestety przez chorobę nie mogłem być na zajęciach, jednakże:
+-wykorzystanie pętli for
+-tworzenia funkcji
+-oraz używania tablic
+
