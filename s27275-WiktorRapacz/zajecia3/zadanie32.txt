@@ -1,0 +1,19 @@
+#!/bin/bash
+
+fibonacci() {
+  if [ $1 -le 1 ]; then
+    return $1
+  else
+    local num1=$(( $1 - 1 ))
+    local num2=$(( $1 - 2 ))
+    fibonacci $num1
+    local val1=$?
+    fibonacci $num2
+    local val2=$?
+    return $(( $val1 + $val2 ))
+  fi
+}
+
+fibonacci 10
+result=$?
+echo $result

@@ -1,0 +1,22 @@
+#!/bin/bash
+
+function koloruj() {
+  local kolor=$1
+  local tekst=$2
+
+  case "$kolor" in
+    "czarny") echo -e "\e[30m${tekst}\e[0m" ;;
+    "czerwony") echo -e "\e[31m${tekst}\e[0m" ;;
+    "zielony") echo -e "\e[32m${tekst}\e[0m" ;;
+    "żółty") echo -e "\e[33m${tekst}\e[0m" ;;
+    "niebieski") echo -e "\e[34m${tekst}\e[0m" ;;
+    "fioletowy") echo -e "\e[35m${tekst}\e[0m" ;;
+    "turkusowy") echo -e "\e[36m${tekst}\e[0m" ;;
+    "biały") echo -e "\e[37m${tekst}\e[0m" ;;
+    *) echo "Nieznany kolor: ${kolor}" ;;
+  esac
+}
+
+# przykładowe użycie
+koloruj "czerwony" "Cześć, to jest tekst w kolorze czerwonym!"
+koloruj "niebieski" "A to jest tekst w kolorze niebieskim!"

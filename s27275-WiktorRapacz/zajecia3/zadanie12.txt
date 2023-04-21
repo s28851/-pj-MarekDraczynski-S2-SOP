@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Sprawdź, czy plik config.cfg istnieje w bieżącym katalogu
+if [ -f "config.cfg" ]; then
+    echo "Uruchamiam config.cfg"
+    source config.cfg
+
+# Jeśli plik config.cfg nie istnieje, sprawdź, czy podano argument
+elif [ $# -gt 0 ]; then
+    # Wykonywanie pliku o nazwie takiej jak wartość argumentu
+    if [ -f "$1" ]; then
+        echo "Uruchamiam $1"
+        source "$1"
+
+    else
+        echo "Nie znaleziono pliku $1"
+    fi
+else
+    echo "Brak pliku config.cfg i nie podano argumentu"
+fi

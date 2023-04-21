@@ -9,3 +9,7 @@ ponieważ w domu korzystałem z VMware Workstation.
 Na dzisiejszych zajęciach omawialiśmy skrytpy w bash'u. Było to dla mnie odświeżenie informacji z 1 semstru,
 gdzie też mieliśmy podstawy bash'a, i technikum. Na pozytywne odbieram luźniejsze poprowadzenie cwizceń w porównaniu do pierwszych.
 Typ ćwiczenia też jest dla mnie lepszy i przyjemniejszy niż opisywanie procesu instalacyjnego debian'a
+
+01.04.2023
+Dzisiaj kontynuwaliśmy skrypty, dla mnie to było dalej powtórzenie. Jeśli chodzi o formułe zajęć, został analogiczny
+jak na porzednich. Szybkie i szczegółwe omówienie tematu i praca samodzielna, czyli forma która mi bardzo odpowiada.

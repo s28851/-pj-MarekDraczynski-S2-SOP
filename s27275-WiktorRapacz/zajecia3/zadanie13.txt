@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# Metoda 1: Dopasowanie do wyrażenia regularnego
+if ! [[ "$0" =~ \.sh$ ]]; then
+    echo "Zmieniam nazwę pliku na $0.sh"
+    mv "$0" "$0.sh"
+fi
+
+# Metoda 2: Porównanie ostatnich 3 liter nazwy skryptu
+if [ "${0: -3}" != ".sh" ]; then
+    echo "Zmieniam nazwę pliku na $0.sh"
+    mv "$0" "$0.sh"
+fi
+
+# Metoda 3: Wykorzystanie mechanizmu do wyciągania części napisów
+if [ "${0##*.}" != "sh" ]; then
+    echo "Zmieniam nazwę pliku na $0.sh"
+    mv "$0" "$0.sh"
+fi
+
+# Przy wykonaniu skryptu zostanie wykorzystana tylko jedna(pierwsza) metoda. Dwie następne rzucą błąd
