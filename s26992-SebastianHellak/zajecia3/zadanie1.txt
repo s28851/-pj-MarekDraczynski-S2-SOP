@@ -1,0 +1,48 @@
+cwi1.1
+#!/bin/bash
+
+if [[ $# > 1 ]]; then
+	echo $1
+else
+	echo "Nie podano parametrow"
+fi
+
+
+
+cwi1.2
+
+#!/bin/bash
+
+PLIK="$(pwd)/config.cfg"
+
+if [ -f "$PLIK" ]; then
+	echo "Plik istnieje"
+	bash ./config.cfg
+else 
+	if[[ $# != 0 ]]; then
+		bash ./$1
+	else
+		echo "Error Nie znaleziono pliku"
+	fi
+fi
+
+
+cwi1.3
+#/bin/bash
+
+f_pliku=$0
+
+if [[ ${f_pliku: -3} == ".sh" ]];then
+	echo "Format pliku to .sh"
+else
+	mv $f_pliku $f_pliku.sh
+fi
+
+cwi1.4
+
+#/bin/bash
+
+if [ $(ls | wc -l) -gt 5 ]; then
+        echo "W bieżącym katalogu jest więcej niż 5 plików"
+fi
+

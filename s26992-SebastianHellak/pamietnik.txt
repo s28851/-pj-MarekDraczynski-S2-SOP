@@ -9,3 +9,8 @@ Moj Kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
 Jak się piszę skrypty w Bashu.
 -Wszystko jest dla mnie jasne poniewaz juz kiedys mialem doczynienia z Bashem.
 
+2023-04-02
+Moj Kochany pamietniczku na dzisiejszych zajeciach nauczylem sie:
+-jak się wykorzystuje petle for 
+-jak tworzyc funkcje
+-jak uzywac tablic

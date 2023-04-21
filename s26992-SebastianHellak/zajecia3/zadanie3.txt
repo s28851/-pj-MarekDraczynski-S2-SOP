@@ -1,0 +1,59 @@
+cwi 3.1
+
+#/bin/bash
+
+
+function color(){
+	local color=$2
+	if [ $color == "czarny" ]; then
+		echo -e "\e[30m${1}\e[0m"
+
+	elif [ $color == "czerwony" ]; then
+		echo -e "\e[31m${1}\e[0m"
+	
+	elif [ $color == "zielony" ]; then
+		echo -e "\e[32m${1}\e[0m"
+
+	elif [ $color == "brazowy" ]; then
+		echo -e "\e[33m${1}\e[0m"
+
+	elif [ $color == "niebieski" ]; then
+		echo -e "\e[34m${1}\e[0m"
+
+	elif [ $color == "fioletowy" ]; then
+		echo -e "\e[35m${1}\e[0m"
+
+	elif [ $color == "cyjan" ]; then
+		echo -e "\e[36m${1}\e[0m"
+
+	elif [ $color == "bialy" ]; then
+		echo -e "\e[37m${1}\e[0m"
+	else
+		echo "Podałeś kolor którego nie ma w tej palecie kolorów"
+	fi
+}
+
+color $1 $2
+
+
+cwi3.2
+
+function fibonacci() {
+	n=$1
+	fib=0
+	if [ $n -eq 0 ]; then
+		return $n
+	elif [ $n -eq 1 ]; then
+		return $n
+	else
+        	a=0
+		b=1
+		$fib=((a + b))
+		a=$(fibonacci $((n-1)))
+		b=$(fibonacci $((n-2)))
+		a=$b
+		b=$fib
+		return $fib
+    fi
+}
+
