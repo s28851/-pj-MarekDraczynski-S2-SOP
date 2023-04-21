@@ -10,3 +10,6 @@ Operację na stringach były dla mnie nowe(wyciąganie substringów i manipulacj
 Znajomość tego jest bardzo przydatna, tak samo sed'a, by być w stanie odpowiednio obsłużyć dane, manipulować nimi oraz wyciągać z nich dokładnie potrzebne informacje. 
 Temat jest przedstawiony w sposób zrozumiały i jasny.
 
+02.04.2023
+
+Na dzisiejszych zajęciach kontynuowany był temat skryptowania w BASHU. Pojawiły się nowe zagadanienia związane z pętlami, funkcjami, tablicami oraz regex. Nowością dla mnie były funkcje, szczególnie obsługa funkcji rekurencyjnych w BASHU, korzystając z return, która nie wygląda na najprostszą. Sądze, że to kwiestia praktyki bo zrozumieć jak działają one ze składnią w BASHU. Resztę rzeczy kojarzyłem oraz korzystałem z nich już wcześniej, więc nie mam z nimi problemu. Znajomość wyżej wymienionych tematów jest przydatna oraz ważna do poprawnego i optymalnego skryptowania. Temat przedstawiony został w sposób zrozumiały.
