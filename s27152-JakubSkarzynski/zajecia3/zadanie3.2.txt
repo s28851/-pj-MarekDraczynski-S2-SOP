@@ -1,0 +1,18 @@
+function fibonacci() {
+	n=$1
+	fib=0
+	if [ $n -eq 0 ]; then
+		return $n
+	elif [ $n -eq 1 ]; then
+		return $n
+	else
+        	a=0
+		b=1
+		$fib=((a + b))
+		a=$(fibonacci $((n-1)))
+		b=$(fibonacci $((n-2)))
+		a=$b
+		b=$fib
+		return $fib
+    fi
+}
