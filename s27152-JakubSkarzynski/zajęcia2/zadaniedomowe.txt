@@ -1,0 +1,10 @@
+#!/bin/bash
+
+imie="Jakub"
+
+if ! [ -f "$1" ]; then
+  echo "Plik $1 nie istnieje"
+  exit 1
+fi
+
+sed "s/$imie/$(tput setaf 1)&$(tput sgr0)/g" "$1"

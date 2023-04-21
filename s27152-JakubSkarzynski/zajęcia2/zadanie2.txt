@@ -1,0 +1,24 @@
+1.
+
+Na początku misumy definiujemy zmienną X i przypisać jej wartość "tekst"
+Następnie poleceniem echo wyświetlamy zmienną X.
+W następnej powłoce nic się nie zadzieje, gdyż nie jest już zdefiniowana zmienna X
+Dlatego nie można jej wyświetlić.
+
+2.
+
+Ponieważ dwa słowa są oddzielone spacją, powinniśmy zaznaczyż zmienne cudzysłowiami lub apostrofami
+
+Tu poprawny tekst:
+X="Tekst dłuższy"
+echo $X
+
+3.
+
+Apostrofy ('') są traktowne jako ciągi znaków bez zmiennych, w przeciwieństwie do Cudzysłowia ("") gdzie można wykorzystywać takowe zmienne
+
+4.
+
+Powinien wyglądać tak:
+A=Al
+echo ${A}a ma kota, a kot ma ${A}ę

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ $# -gt 1 ]; then
+  echo "Za dużo argumentów, podaj poprwną ilość"
+  exit 1
+fi
+
+imie=$1
+
+if [[ $imie =~ a$ ]]; then
+  imie=$(echo "$imie" | sed 's/a$/ę/')
+else
+  imie="$imie"a
+fi
+
+echo "$1 ma kota, a kot ma $imie."

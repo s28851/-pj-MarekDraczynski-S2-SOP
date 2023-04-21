@@ -1,0 +1,1 @@
+Nie będzie działalo poprawnie, gdyż ls -l jedynie odczyta $X, aby działało poprawnie należy wrzucić $X w cudzysłów - "$X"
