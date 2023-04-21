@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Pętla for wypisująca argumenty w cudzysłowach
+for arg in "$@"; do
+    echo "\"$arg\""
+done

@@ -46,7 +46,7 @@ przestrzenią pamięci masowej. W szczególności, zarządca pozwala na połącz
 			*Możliwość wybrania dysku na którym chce przydzielić partycje
 			*Configure iSCSI columes - pozwala podłączyć dyski sieciowe
 			*Po wybraniu przestrzeni dla partycji można wybrać jej wielkość
-			*Potem można wybrać między Primary(Partycja główna, Max 4) i logical(nie ograniczona ilość)
+			*Potem można wybrać między Primary(Partycja główna, Max 4) i logical(ilość zalezna od rozmiaru dysku i rozmiarów partycji)
 			*System plików:
 				*ext4 - najnowsza wersja(wydajniejsza i wieksze limity plików i partycji) standardowego systemu plików stworzonego dla systemów typu linux
 				*ext3 - starsza wersja ext, wprowadza dziennikowanie czyli zapisywanie histori zmian w plikach
@@ -80,18 +80,23 @@ logical 1GB swap. Pasuje mi ta konfiguracja więc zapisuje partycjonowanie. Mon�
 	17. Nie przystępuje do animowego udostępniania danych
 	18. Wybieram tylko standard system utilities ponieważ nic więcej nie potrzebuje
 	Inne Opjce:
-		*GNOME - domyślne środowisko graficzne w debianie
-		*KDE - przypominające windowsa
-		*Xfce - lekkie i szybkie środowisko graficzne, proste i wydajne
-		*LXDE - Srodowisko graficzne dla starszych urządzeń
-		*Cinnamon - Srodowisko oparte na biblitekach GNOME, Klasyczny interfejs i wiele narzędzi konfiguracyjnych
-		*MATE - Srodowisko oparte na biblitekach GNOME 2, Klasyczny interfejs i wiele narzędzi konfiguracyjnych
-		*LXQt - Minimalistyczne lekkie i szybkie środowisko
-		*GNOME Flashback - oparty na GNOME 2
-		*KDE Plasma - rozbudowane środowisko graficzne oferujace dużą gamę funckji
-		*WEB Server - serwer internetowy
-		*Standard System utilities - zestaw podstawowych narzędzi niezbędny do działania systemu
+		*GNOME - domyślne środowisko graficzne w debianie (CPU 1GHz, RAM 2GB, obsługa OpenGL ^3.0, 10GB wolnego miejsca)
+		*KDE - przypominające windowsa (CPU 1GHz, RAM 1GB, obsługa OpenGL ^2.0, 10GB wolnego miejsca)
+		*Xfce - lekkie i szybkie środowisko graficzne, proste i wydajne (CPU 700MHz, RAM 512MB, obsługa OpenGL ^2.0, 4GB wolnego miejsca)
+		*LXDE - Srodowisko graficzne dla starszych urządzeń (CPU 256MHz, RAM 128MB, obsługa OpenGL ^2.0, 4GB wolnego miejsca)
+		*Cinnamon - Srodowisko oparte na biblitekach GNOME, Klasyczny interfejs i wiele narzędzi konfiguracyjnych (CPU 1GHz, RAM 1GB, obsługa OpenGL ^2.0, 5GB wolnego miejsca)
+		*MATE - Srodowisko oparte na biblitekach GNOME 2, Klasyczny interfejs i wiele narzędzi konfiguracyjnych (CPU 1GHz, RAM 1GB, obsługa OpenGL ^2.0, 10GB wolnego miejsca)
+		*LXQt - Minimalistyczne lekkie i szybkie środowisko (CPU 700MHz, RAM 512MB, obsługa OpenGL ^2.0, 4GB wolnego miejsca)
+		*GNOME Flashback - oparty na GNOME 2 (CPU 1GHz, RAM 1GB, obsługa OpenGL ^2.0, 5GB wolnego miejsca)
+		*KDE Plasma - rozbudowane środowisko graficzne oferujace dużą gamę funckji (CPU 1GHz, RAM 1GB, obsługa OpenGL ^2.0, 10GB wolnego miejsca)
+		*WEB Server - serwer internetowy (wymagania zależą od ilości serwisów odpalonych na serwerze)
+		*Standard System utilities - zestaw podstawowych narzędzi niezbędny do działania systemu (wymagania zależa od ilości i złożoności zadań które będą wykonywane)
+			*Przykładowe narzędzia: bash, grep, ls, rm, cp, mv, passwd, ifconfig, netstat, top, ps, czy systemctl.
 	19. Nie instaluje dodatkowego boot leader'a, ponieważ nie planuje instalować innego systemu.
+		*Bootloader domyślnie jest instalowany na partycji startowej, jednak przy samodzielnej instalacji można wybrać dowolne miejsce na dysku/partycji,
+			jedynym wymogiem jest wybór miejsca z flagą startową
+		*Bootloader można zainstalować też po zainstalowaniu systemu za pomoca polecenia ,,grub-install", przydaję się to kiedy np,
+			nagle będziemy chcieli mieć drugi system na maszynie 
 	20. Gotowe, debian zainstalowany
 		
 		

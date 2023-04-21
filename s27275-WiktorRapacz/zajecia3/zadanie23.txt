@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Ustawienie zmiennej IFS na nową linię, aby umożliwić iterowanie po każdej linii
+IFS=$'\n'
+
+# Pętla for wypisująca pliki i katalogi
+for item in $(ls); do
+    echo "Patrzcie Państwo, oto plik: $item"
+done

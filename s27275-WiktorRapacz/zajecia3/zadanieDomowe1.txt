@@ -1,0 +1,6 @@
+^[A-ZĄĆĘŁŃÓŚŹŻ][a-ząćęłńóśźż]+$ 
+
+^ - Początek regex'a
+[A-ZĄĆĘŁŃÓŚŹŻ] - dowolna duża litera i polskie znaki
+[a-ząćęłńóśźż]+ - dowolna liczba małych liter i polskich znaków
+$ - koniec regex'a
