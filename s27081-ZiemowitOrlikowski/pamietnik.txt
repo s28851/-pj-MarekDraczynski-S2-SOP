@@ -46,3 +46,4 @@ Na zajęciach porwadzący przedstawił język C posługując się Linuxem, wytł
 Uważam że pointery sprawiają mi jeszcze kłopoty
 
 Zaskaujące było jak prowadzący przedstawił dosyć złożony program z obsługą plików
+
