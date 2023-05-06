@@ -1,1 +1,12 @@
 
+#!/bin/bash
+
+IMIE=$1
+if [[ $IMIE == *"a" ]];
+then
+#wariant jak imie jest kobiecie
+	echo "${IMIE} ma kota, kot ma ${IMIE:0:${#IMIE}-1}ę"
+else
+#jak nie kobiece to jest męskie
+	echo "${IMIE} ma kota, kot ma ${IMIE:0:${#IMIE}}a"
+fi
