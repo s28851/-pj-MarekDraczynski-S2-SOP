@@ -5,3 +5,4 @@ if [[ $0 =~ \.sh$ ]]; then
 else
         mv $0 $0.sh
 fi
+
