@@ -36,6 +36,8 @@ fi
 
 1.4
 
+#/bin/bash
+
 count=$(ls | wc -l)
 if [[ "$count" -gt 5 ]]; then
     echo "W biezacym katalogu jest więcej niż 5 plikow."
