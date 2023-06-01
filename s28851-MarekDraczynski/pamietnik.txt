@@ -1,1 +1,9 @@
 2023.06.01 Założenie pamiętnika :)
+nauczyłem się forkować repozytorium
+nauczyłem się tworzyć klon repozytorium na dysku
+utowrzyłem plik pamiętnika i wykonałem commit
+niestety nie zadziałał, musiałem dodać plik poleceniem gitt add
+następnie git commit i git push - zadziałało
+
+następnie zainstalowałem ORALCLE VM BOX
+i pobrałem obraaz debiana
