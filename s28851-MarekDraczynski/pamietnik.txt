@@ -7,3 +7,7 @@ następnie git commit i git push - zadziałało
 
 następnie zainstalowałem ORALCLE VM BOX
 i pobrałem obraaz debiana
+
+Wybrałem opcję instalacyjną pełną, stabilną 
+Zapoznałem się z metodami instalacji przez internet
+- opcja małej płyty CD, USG i bootowania przez cieć - wymagają one pobrania małego pliku, następnie reszta jest pobierana przez internet lub przez lokalną sieć z ustawionym serwere, TFTP lub innym.  
