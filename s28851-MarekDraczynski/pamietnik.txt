@@ -16,5 +16,8 @@ mam komputer z i7, 16GB,
 
 nie mogłem uruchomić instalacji debiana, musiałem najpierw włączyć virtualzację w BIOSie
 
-
-
+instaluję debiana bez interfejsu graficznego, by nie obciążać maszyny, 
+pamięć na czas instalacji 4096MB, po instalacji zmniejszyłem do 512MB, zalecanego minimum
+instaluję dysk VDI - opracowany przez ORACLE
+Nie istaluję VHD wersja opracowana przez Microsoft, ani VMDK wersja opracowania przez VMware
+według danych z sieci dyski VDI są mniejsze i działają szybciej od dwóch pozostałych
