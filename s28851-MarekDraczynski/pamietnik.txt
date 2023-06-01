@@ -13,3 +13,8 @@ Zapoznałem się z metodami instalacji przez internet
 - opcja małej płyty CD, USG i bootowania przez cieć - wymagają one pobrania małego pliku, następnie reszta jest pobierana przez internet lub przez lokalną sieć z ustawionym serwere, TFTP lub innym.  
 Wybór wersji amd64
 mam komputer z i7, 16GB, 
+
+nie mogłem uruchomić instalacji debiana, musiałem najpierw włączyć virtualzację w BIOSie
+
+
+
