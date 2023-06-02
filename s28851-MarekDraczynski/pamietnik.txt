@@ -21,3 +21,10 @@ pamięć na czas instalacji 4096MB, po instalacji zmniejszyłem do 512MB, zaleca
 instaluję dysk VDI - opracowany przez ORACLE
 Nie istaluję VHD wersja opracowana przez Microsoft, ani VMDK wersja opracowania przez VMware
 według danych z sieci dyski VDI są mniejsze i działają szybciej od dwóch pozostałych
+
+VHD można zainstalować również przez Hyper-V,zaletą jest że może być widoczny w systemie Windows jako dodatkowy dysk, 
+VMDK pozwala na zgodność z innymi narządziami VMWare, ale ja nie potrzebuję takiej opcji. 
+
+
+
+
