@@ -32,6 +32,10 @@ Przy dużych projetach zastosjuę stały rozmiar, by nie opóźniać dostępu do
 Następnie określamu romiar pliku wirtualnego dysku
 wystarczającą pojemnością jest 2GB i taką przydzielam, później (jak maszyna będzie wyłączona) romiar będzie modyfikować według potrzeb. To jest minimalna wymagana objętość dysku.
 
+Następnie ustawienia:
+- standardowy folder migawek
+- współdzielony schowek wyłączony - nie będę instalował gościa w goszczonym systemie operacyjnym 
+- przeciąganie i upuszczanie wyłączone ze względu na wyłączony trybgraficzny , nie będzie kursora myszy
 
 
 
