@@ -25,6 +25,10 @@ według danych z sieci dyski VDI są mniejsze i działają szybciej od dwóch po
 VHD można zainstalować również przez Hyper-V,zaletą jest że może być widoczny w systemie Windows jako dodatkowy dysk, 
 VMDK pozwala na zgodność z innymi narządziami VMWare, ale ja nie potrzebuję takiej opcji. 
 
+natępnym krokiem jest wybór sposobu przydzielania pamięci z dysku fizycznego dla dysku wirtualnego. 
+moje projekty są małe więc mogę sobie pozwolić na przydzialanie dynamiczne. 
+Przy dużych projetach zastosjuę stały rozmiar, by nie opóźniać dostępu do pojemności wirtualnego dysku
+ 
 
 
 
