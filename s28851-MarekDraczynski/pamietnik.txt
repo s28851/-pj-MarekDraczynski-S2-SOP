@@ -47,5 +47,20 @@ Następnie ustawienia:
 - nie włączam PAE/NX - PAE pozwala na dotęp do większj niż 4GB pamięci dla systemów 32 bit, ja instaluję 64 bit
 - NX zabezpiecza przed atakami typu stackoverflow - nie potrzebuję tych zabezpieczeń dla projektu
 
+- włączam akcelerację - przyspiesza dostęp do pamięci, 
+
+USTAWIENIA EKRANU
+- pamięć wideo ustawiam na 16MB, nie bedę korzystał z programów graficznych i nie ustawiam dlatego większej pamięci
+- nie włączam akceleracji 3d z tego samego powodu
+- wybieram kontroler VMSVGA - jest bardzie zaawansowany od VGA i nie tak obciążający VBoxSVGA
+- nie włączam zdalnego pulpitu
+- nagrywania  nie włączam
+
+Ustawienia Dźwięku- niwyłączam dźwięk, nie będę używał
+
+Utawienia sieci - mam aktywną jedną kartę sieciową w systemie NAT
+system NAT umożliwia dostęp do internetu - mój komputer dla wirtualnego pełni rolę routera
+ 
+
 
 
