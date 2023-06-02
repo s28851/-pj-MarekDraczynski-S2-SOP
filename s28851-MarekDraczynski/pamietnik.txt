@@ -36,6 +36,13 @@ Następnie ustawienia:
 - standardowy folder migawek
 - współdzielony schowek wyłączony - nie będę instalował gościa w goszczonym systemie operacyjnym 
 - przeciąganie i upuszczanie wyłączone ze względu na wyłączony trybgraficzny , nie będzie kursora myszy
+- nie włączam szyfrowania dysku, nie jest potrzebne do projektu ćwiczebnego. 
+- ustawiam RAM na 2GB
+- ustawiam kolejność butowania na tylko z dysku twardego, na czas instalacji systemu włączę jednorazowe uruchomienie z dysku CD (obrazu)
+- Chipset na PIIX3, nie ustawiam na nowszy ICH9 obługiwany przez MciOS
+- urządzenie wskazujące - mysz
+- pozostawiam zaznaczoną opcję włącz I/O APIC - bo instaluję w windows
+
 
 
 
