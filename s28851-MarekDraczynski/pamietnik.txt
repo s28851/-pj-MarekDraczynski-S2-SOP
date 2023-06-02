@@ -42,7 +42,10 @@ Następnie ustawienia:
 - Chipset na PIIX3, nie ustawiam na nowszy ICH9 obługiwany przez MciOS
 - urządzenie wskazujące - mysz
 - pozostawiam zaznaczoną opcję włącz I/O APIC - bo instaluję w windows
-
+- umożliwiam przechwytywwanie zegara w UTC, synchronizacja  czasu
+- nie włączam EFI- nie istaluję na McBooku, windows tego nie obsługuje, nie jest normalnie stosowane
+- nie włączam PAE/NX - PAE pozwala na dotęp do większj niż 4GB pamięci dla systemów 32 bit, ja instaluję 64 bit
+- NX zabezpiecza przed atakami typu stackoverflow - nie potrzebuję tych zabezpieczeń dla projektu
 
 
 
