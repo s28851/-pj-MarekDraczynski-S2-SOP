@@ -28,7 +28,10 @@ VMDK pozwala na zgodność z innymi narządziami VMWare, ale ja nie potrzebuję 
 natępnym krokiem jest wybór sposobu przydzielania pamięci z dysku fizycznego dla dysku wirtualnego. 
 moje projekty są małe więc mogę sobie pozwolić na przydzialanie dynamiczne. 
 Przy dużych projetach zastosjuę stały rozmiar, by nie opóźniać dostępu do pojemności wirtualnego dysku
- 
+
+Następnie określamu romiar pliku wirtualnego dysku
+wystarczającą pojemnością jest 2GB i taką przydzielam, później (jak maszyna będzie wyłączona) romiar będzie modyfikować według potrzeb.
+
 
 
 
