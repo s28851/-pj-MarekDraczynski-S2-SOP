@@ -60,7 +60,14 @@ Ustawienia Dźwięku- niwyłączam dźwięk, nie będę używał
 
 Utawienia sieci - mam aktywną jedną kartę sieciową w systemie NAT
 system NAT umożliwia dostęp do internetu - mój komputer dla wirtualnego pełni rolę routera
+w zaawansowanych paramterach wybieram kartę sieciową desktop, nie wybieram serverowej - bo do tego projektu nie jest potrzebna, nie istalujemy wersji serwerowej maszyny
+nie wybieram starszych wersji kart sieciowych, nie są już wykorzystywane 
+Inne dostępne opcje to 
+- mostkowana karta sieciowa - wirualna maszyna jest równoprawna w sieci tak jak mój komputer, dostaje swój adres IP, 
+- sieć wewnętrzna - służy do tworzenia sieci dla mszyn wirtualnych, by razem pracowyły w jednym środwoisku sieciowym i się komunikowały; istnieje możliwość nadawania nazwy sieci, muszą mieć ustawioną taką samą nazwę by się widziały
+- karta sieci izolowanej tylko do komunikowania się komputera z maszyną wirtualną, środowisko oddzielone od internetu, 
+- można też nie tworzyć karty sieciowej
  
 
 
-
+!
