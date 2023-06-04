@@ -67,6 +67,18 @@ Inne dostępne opcje to
 - sieć wewnętrzna - służy do tworzenia sieci dla mszyn wirtualnych, by razem pracowyły w jednym środwoisku sieciowym i się komunikowały; istnieje możliwość nadawania nazwy sieci, muszą mieć ustawioną taką samą nazwę by się widziały
 - karta sieci izolowanej tylko do komunikowania się komputera z maszyną wirtualną, środowisko oddzielone od internetu, 
 - można też nie tworzyć karty sieciowej
+Dalej w ustawieniach zaawansowanych można zmieniać numer MAC - zmienia się tylko 6 ostatnich znaków - jest to numer karty sieciowej, pierwsze sześć znaków to numer maszyny wirtualnej - niezmienne
+Dodatkowo można symulować podłączenie lub nie kabla sieciowego. 
+Nie włączam przekierowywania portów. Można to stosować przy niestandardowych przekierowaniach komunikacji na inne porty. 
+Nie włączam portów szeregowych - nie będę używał komunikacji z innymi urządzeniami.
+
+USG - włączone - potrzebne chociażby do poruszania myszką, ale można też włączać inne urządzenia podpięte do komputera.
+
+Istnieje możliwość udostępniania katalogów komputera dla maszyny wirtualnej. Mogą wtedy je współdzielić. Można wtedy łatwo zapisywać efekty pracy by było dostępne dla mojego komputera. 
+
+Nie zmieniak ustawień Interfejsu użytkownika, bo to są ustawienia VirtualBox a nie maszyny wirtualnej. 
+
+
  
 
 
