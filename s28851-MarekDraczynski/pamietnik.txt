@@ -78,6 +78,27 @@ Istnieje możliwość udostępniania katalogów komputera dla maszyny wirtualnej
 
 Nie zmieniak ustawień Interfejsu użytkownika, bo to są ustawienia VirtualBox a nie maszyny wirtualnej. 
 
+Uruchamiam wirtualną maszynę w trybie zwykłym.
+Opcja "zwykły" uruchamia maszynę wirtualną w trybie z graficznym interfejsem użytkownika, "bezgłowy" uruchamia ją w trybie bez interfejsu graficznego, a "oddzielny start" dotyczy maszyn wirtualnych wieloprocesorowych i pozwala na kontrolowany rozruch procesorów.
+
+INSTALACJA DEBIANA
+==================
+nic nie zadziałało, dlatego wyłączyłem VM i w ustawieniach wybrałem jako primary disk obraz instalacji debiana
+ponownie uruchomiłem VM, uruchomił mi się interfejs instalacji debiana
+opcje:
+1. instalacja graficzna - tego nie wybieram, bo więcej zużywa zasobów na grafikę, dodatkowo będzie opóźniać działanie istalatora i trzeba obsługiwać myszką, 
+2. Install ==> to wybieram, jest to instalacja tekstowa
+3. Zaawansowanie funkcje:
+3.1. instalacja graficzna expercka - udostępnia więcej opcji instalacyjnych niż zwykła instalacja graficzna
+3.2. graficzny tryb rescue - używa się jeżeli dojdzie na awarii systemu w celu przywrócenia do działania
+3.3. graficzny tryb instalacji automatyczne - można przygotować instalacje dla wielu komputerów by były tak samo skonfigurowane, bez przechodzenia przez menu instalacyjne
+3.4.5.6 - to takie same tryby jak trzy wcześniejsze ale tekstowe
+3.7. instalacja kontrolowana głosem - to dla osób z trudnościami np ze wzrokiem, by mogły zainstalować
+4. opcja instalacji w trybie dużego kontrastu ekranu
+5. help - wejście do pomocy instalatora
+6. instalacja z syntezą mowy
+
+Uruchamiam install w trybie tekstowym
 
  
 
