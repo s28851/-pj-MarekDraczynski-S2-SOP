@@ -135,8 +135,22 @@ Dostępne są formaty zapisu plików i użycia partycji:
 -physical volume for LVM 
 -nieużywanie partycji
 
-
-
+Dalsze ustawienia to
+- mount point oznacza ścieżkę gdzie będą zapisane pliki systemowe
+- mount options 
+	- ro - oznacza read only 
+	- rw - read and write - możliwy odczyt i zapis
+	- noexec - blokada wykonywania plików systemu
+	- uio=XXXX=ustawia identyfikator użytkownika UID dla montowanego ystemu
+	- gid=XXX ustawia identyfikator grupy
+	- defaults - domyślne ustawienia dla denego systemu plików
+Te są ogólne domyślne parametry montowania dla systemu plików EXT4 z ustawieniami "defaults" :
+- "rw" - montowanie w trybie odczytu i zapisu (read-write).
+- "relatime" - aktualizacja czasu ostatniego dostępu do pliku tylko wtedy, gdy jest to konieczne.
+- "errors=remount-ro" - w przypadku wystąpienia błędów na partycji, automatyczne montowanie w trybie tylko do odczytu (read-only).
+- "barrier=1" - włączenie mechanizmu blokad (barrier) dla operacji zapisu w celu zapewnienia integralności danych.
+- "data=ordered" - operacje zapisu są wykonywane w kolejności chronologicznej.
+- "discard" - włączenie funkcji TRIM, która pozwala na automatyczne usuwanie niepotrzebnych danych z dysku w celu optymalizacji wydajności.
 
 
 
