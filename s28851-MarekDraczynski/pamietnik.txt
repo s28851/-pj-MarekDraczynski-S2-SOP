@@ -99,8 +99,46 @@ opcje:
 6. instalacja z syntezą mowy
 
 Uruchamiam install w trybie tekstowym
+Kolejne kroki to 
+- wybór języka - angielski, bo w tym języku uczumy się programowania i jest najwięcej informacji w sieci o obsłudze w angielskim
+- wybór kraju Polska
+- wybór klawiatury - UT8 - by nie popełniać błędów wprowadzając niechcący polskie czcionki do kodu
+- zmieniam nazwę hosta na "Marek"
+- hasło hosta pozostawiam puste, nie wpisuję domeny, służy ona do środowisk pracy z wieloma stanowiskami, jeżeli sieć ma swoją domenę do 
+- nadałem nazwę użytkownika, i login użytkownika i nadałem hasło 
 
- 
+Następnie tworzenie partycji dysku:
+---------------------------------
+1. wybór całego dysku i procesu partycjonowania prowadzony przez instalatora
+2. + tworzenie LVM - obszaru logicznego na dyskach lub partycji
+3. + szyfrowanie
+4. manualne tworzenie partycjonowania
+
+Wybrałem wybór całego dysku w/g instalatora
+stworzyłem jeden dysk, instalator nie dawał wyboru partycji /home i partycji /var - sprawdzę czy sam to stworzył
+
+W manualnym możliwe jest ustawienie RAID - czyli obcji obsługi wielu dysków, automatycznego klonowania, dzielenia transferu, itp. 
+Możliwe jest również tworzenie partycji - w systemie MPT do czterech standardowych, dla większej ilości trzeba wybrać logiczne partycje . 
+Ustawiam przestrzeń partycji primary 2GB na system.
+Dostępne są formaty zapisu plików i użycia partycji: 
+-Ext2 - dość stary, prosty, raczej nieużywany system zapisu plików, bez kontroli , dość szybki
+-Ext3 - nowsza wersja poprzedniego, obsługuje journaling - dotyczący zapisu, tworzy zapisy odnośnie stanu realizacji zapisu plików; w przypadku awarii zasilania pozwala na odtworzenie dzaiałania
+-Ext4 - jeszcze nowasza wersja, szybsza, wydajniejsza  <<< to wybieram
+-btrfs - better fs, z journalingiem 
+-jfs - system z journalingiem 
+-xfs - 
+-fat16 - sytem używany w DOS
+-fat32 - system używany w DOS
+-swap area - używanie partycji jako obszaru wymiany danych z pamięcią ram
+-physical volume for encryption - szyfrowanie pratycji
+-physical volume for RAID - ustawianie RAID
+-physical volume for LVM 
+-nieużywanie partycji
+
+
+
+
+
 
 
 !
