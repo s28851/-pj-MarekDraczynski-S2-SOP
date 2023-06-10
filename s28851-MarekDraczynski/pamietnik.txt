@@ -152,6 +152,51 @@ Te są ogólne domyślne parametry montowania dla systemu plików EXT4 z ustawie
 - "data=ordered" - operacje zapisu są wykonywane w kolejności chronologicznej.
 - "discard" - włączenie funkcji TRIM, która pozwala na automatyczne usuwanie niepotrzebnych danych z dysku w celu optymalizacji wydajności.
 
+- Rezerwacja bloków służy do zarezerwowania pamięci dysku na ewentualne remapowanie dysku w przypadku błędów
+- Typical usage: przy bardzo dużym dysku z bardzo ilością małych plików, może zabraknąć miejsca na deskryptory plików, standars, news linfile, lonfile2
+- ustawiamy mapę butującą na daną partycję
+ 
+Zera przy partycjach oznaczają:
+- Pierwsze zero (0) - Oznacza numer partycji. Jeśli masz tylko jedną partycję na dysku, to numer partycji będzie 0. Jeśli masz więcej niż jedną partycję, to numery partycji będą kolejno 0, 1, 2 itd., w zależności od kolejności partycji na dysku.
+- Drugie zero (0) - Oznacza początkowy sektor partycji. Określa on, od którego sektora na dysku rozpoczyna się partycja. Jeśli podasz wartość 0, to partycja rozpocznie się od pierwszego sektora dysku.
+- Trzecie zero (0) - Oznacza rozmiar partycji. Określa on, ile sektorów na dysku zajmuje partycja. Jeśli podasz wartość 0, partycja zostanie ustawiona na maksymalny dostępny rozmiar na dysku.
+Podając te zera, instalator Debiana automatycznie konfiguruje partycje na podstawie dostępnych opcji i parametrów.
+
+Następnie instaluje się goły debian.
+Kolejne opcje to :
+
+- zaznaczam nie dla dodatkowych materiałów, nie używam rzadnych płyt
+- wybór archive mirror na polskę
+- wyboeramy ftp.task.gda.pl - najbliższy serwer
+- nie podaję proxy - bo takiego nie mam
+- można wziąć udział w ankiecie pakietów, odnośnie użytkowania pakietó w stystemach.
+
+Na ten moment jest zainstalowane na razie jądro systemu, trzeba je doposażyć 
+Następnie jest wybór predefiniowanych kolekcji oprogramowania. 
+- wybieram GNOME - opiszę poniżej
+- pakiet Xfce - to inny pakiet graficzny
+- GNOME flashback - to odmiana środowiska graficznego GNOME tylko wyglądem przypominająca starsze wersje systemu
+- KDE Plasma, Cinnamon, MATE, LXDE, LXQt - to kolejne pakiety oprogramowania jądra debiana; LXy to wersje mniej wymagające odnośnie zasobów systemowych i zwykle się instaluje na starszych maszynach
+- web server - oprogramowanie umożliwiające udostępnianie zawartości stron internetowych
+SSH serwer to oprogramowanie umożliwiające zdalne logowanie i bezpieczny transfer plików przez protokół SSH - domyślnym serwerem ssh jest OpenSSH Server
+- Standard System Utilities to zestaw podstawowych narzędzi systemowych dostępnych w Debianie. Obejmuje narzędzia takie jak bash (powłoka wiersza poleceń), coreutils (zestaw podstawowych narzędzi systemowych), findutils (narzędzia do wyszukiwania plików), procps (narzędzia monitorowania procesów), sysvinit (inicjalizacja systemu), udev (zarządzanie urządzeniami) i wiele innych. Te narzędzia są niezbędne do zarządzania systemem, przeszukiwania plików, monitorowania procesów i wykonywania różnych operacji systemowych w Debianie.
+
+PAKIET GNOME, to środowisko graficzne dlw debianie GNU Network Object Model Environment- popularne środowisko dla wielu dystrybucji Linuksa - w tym debiana, składniki:
+- Gnome Shell: Jest to główny składnik środowiska GNOME, który zarządza pulpitem, menu, panelami i oknami. Gnome Shell dostarcza również narzędzia do zarządzania aplikacjami i pulpitem.
+- GNOME Panel: Panel to górny pasek narzędziowy, który wyświetla menu aplikacji, ikony otwartych okien, przyciski uruchamiania i inne użyteczne elementy interfejsu.
+- GNOME Nautilus: Nautilus to menedżer plików w GNOME, który zapewnia interfejs graficzny do przeglądania i zarządzania plikami i folderami.
+- GNOME Terminal: Jest to emulowana konsola, która umożliwia interakcję z systemem poprzez wpisywanie poleceń.
+- GNOME Aparat: Aparat to program do zarządzania zdjęciami, który pozwala na przeglądanie, organizowanie, edytowanie i udostępnianie zdjęć.
+- GNOME Kalendarz: Kalendarz to aplikacja do zarządzania terminami, umożliwiająca tworzenie i śledzenie wydarzeń oraz zarządzanie kalendarzami.
+
+Następnie instalacja GRUB bootloadera - jest to pierwszy program uruchamiany po uruchomieniu komputera i on uruchamia system
+
+
+polecenia do wznowienia instalatora
+tasksel
+apt install aplitude  -->  aplitude
+
+
 
 
 
