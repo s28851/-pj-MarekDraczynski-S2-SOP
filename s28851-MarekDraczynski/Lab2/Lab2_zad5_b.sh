@@ -1,9 +1,7 @@
 #!/bin/bash
 
-Z=$(ls -l)
-echo $Z
-echo ""
-echo "A teraz tak samo jak wpisanie polecenia"
-echo ""
+ZMIANA=$(echo "$*" | sed -e 's/SOP/\\e[32mSOP\\e[0m/g')
+Z=$(echo -e "$ZMIANA")
+echo --------
 echo "$Z"
-
+echo --------
